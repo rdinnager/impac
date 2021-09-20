@@ -10,9 +10,9 @@
 #' an image when evaluated. Tje function can take a single argument,
 #' which is the current iteration of the packing algorithm. Can also
 #' be specified as an `rlang` style lambda syntax (see [rlang::as_function()]).
-#' @param width
-#' @param height
-#' @param mask
+#' @param width Width in pixels of produced image
+#' @param height Height in pixels of produced image
+#' @param mask An optional masking image.
 #' @param weights
 #' @param preferred
 #' @param max_num_tries
@@ -29,7 +29,8 @@ immosaic <- function(im, width = 1024, height = 800,
                      preferred = NULL,
                      max_num_tries = 100,
                      scales = c(0.5, 0.5) + (0.25) * 4 + (0.15) * 8,
-                     scale_fun = NULL) {
+                     scale_fun = NULL,
+                     bg = "white") {
 
   canvas <- imager::imfill(x = width, y = height,
                            val = c(0, 0, 0, 0))
