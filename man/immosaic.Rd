@@ -15,10 +15,11 @@ immosaic(
   scales = c(rep(0.5, 2), rep(0.25, 4), rep(0.15, 8)),
   scale_fun = function(i, s, c) {     if (c < (i * 0.5)) {         mscale <- min(s)    
         c(s, rep(mscale/2, floor(1/mscale)))     }     else {         scales     } },
-  max_images = 2000,
+  max_images = 1000,
   min_scale = 0.05,
   bg = "transparent",
   show_every = 25,
+  progress = TRUE,
   ...
 )
 }

@@ -22,8 +22,6 @@
 #' @return
 #' @export
 #'
-#' @importFrom imager %inr%
-#'
 #' @examples
 immosaic <- function(im, width = 1024, height = 800,
                      mask = NULL,
@@ -39,7 +37,7 @@ immosaic <- function(im, width = 1024, height = 800,
                          scales
                        }
                      },
-                     max_images = 2000,
+                     max_images = 1000,
                      min_scale = 0.05,
                      bg = "transparent",
                      show_every = 25,
@@ -49,7 +47,7 @@ immosaic <- function(im, width = 1024, height = 800,
 
   bg_col <- as.vector(col2rgb(bg)) / 255
   canvas <- imager::imfill(x = width, y = height,
-                           val = c(bg_col, 0))
+                           val = c(0, 0, 0, 0))
 
   if(!is.null(mask)) {
 
@@ -167,6 +165,8 @@ immosaic <- function(im, width = 1024, height = 800,
       }
 
       resized_img = imager::resize(img, w, h, interpolation_type = 6)
+      resized_img <- imchange(resized_img, ~ . < 0, ~ 0)
+      resized_img <- imchange(resized_img, ~ . > 1, ~ 1)
 
       wh <- round(0.5 * w)
       hh <- round(0.5 * h)
@@ -176,12 +176,14 @@ immosaic <- function(im, width = 1024, height = 800,
       pset <- imager::imeval(mask, ~ x %inr% xr & y %inr% yr)
 
       sub_mask <- imager::crop.bbox(mask, pset)
-      img_mask <- imager::channel(resized_img, 4)
+      img_mask <- channel(resized_img, 4)
 
       if(any(dim(img_mask)[1:2] != dim(sub_mask)[1:2])) {
         needs_resize <- TRUE
         img_mask <- imager::resize(img_mask, imager::width(sub_mask), imager::height(sub_mask),
                                    interpolation_type = 6)
+        img_mask <- imchange(img_mask, ~ . < 0, ~ 0)
+        img_mask <- imchange(img_mask, ~ . > 1, ~ 1)
       }
 
       composite <- any(imager::parmin(list(sub_mask, img_mask)) > 0)
@@ -196,14 +198,11 @@ immosaic <- function(im, width = 1024, height = 800,
       ## paste image into canvas
       if(needs_resize) {
         resized_img <- imager::resize(resized_img, imager::width(sub_mask), imager::height(sub_mask))
+        resized_img <- imchange(resized_img, ~ . < 0, ~ 0)
+        resized_img <- imchange(resized_img, ~ . > 1, ~ 1)
       }
-
-      #canvas_cropped <- imager::crop.bbox(canvas, pset)
       new_img <- imager::add(list(imager::crop.bbox(canvas, pset), resized_img))
       canvas[pset] <- new_img
-      #transp <- imager::channel(canvas_cropped, 4) > 0
-      #canvas[pset][transp] <- resized_img[transp]
-
       ## regenerate mask
       mask <- imager::channel(canvas, 4)
       success <- TRUE
