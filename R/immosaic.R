@@ -41,6 +41,7 @@ immosaic <- function(im, width = 1024, height = 800,
                      min_scale = 0.05,
                      bg = "transparent",
                      show_every = 25,
+                     progress = TRUE,
                      ...) {
 
 
@@ -114,9 +115,11 @@ immosaic <- function(im, width = 1024, height = 800,
   image_map <- data.frame(x = NA, y = NA, image = NA)
   count <- 0
 
-  total <- ifelse(im_type == "function", "?", as.character(num_images))
-  format <- paste0(":spin (:current/", total, " images packed. Packing at :tick_rate images per second. Time elapsed: :elapsedfull")
-  pr <- progress::progress_bar$new(format = format, total = NA)
+  if(progress) {
+    total <- ifelse(im_type == "function", "?", as.character(num_images))
+    format <- paste0(":spin (:current/", total, " images packed. Packing at :tick_rate images per second. Time elapsed: :elapsedfull")
+    pr <- progress::progress_bar$new(format = format, total = NA)
+  }
 
   for(i in seq_len(num_images)) {
 
@@ -182,7 +185,9 @@ immosaic <- function(im, width = 1024, height = 800,
       composite <- any(imager::parmin(list(sub_mask, img_mask)) > 0)
 
       if(composite) {
-        pr$tick(0)
+        if(progress) {
+          pr$tick(0)
+        }
         next
       }
 
@@ -203,7 +208,9 @@ immosaic <- function(im, width = 1024, height = 800,
 
     if(success) {
       count <- count + 1
-      pr$tick()
+      if(progress) {
+        pr$tick()
+      }
       if(show_every != 0) {
         if(count %% show_every == 0) {
           if(bg != "transparent") {
@@ -230,7 +237,9 @@ immosaic <- function(im, width = 1024, height = 800,
     canvas <- imager::flatten.alpha(canvas, bg = bg)
   }
 
-  pr$terminate()
+  if(progress) {
+    pr$terminate()
+  }
 
   return(list(image = canvas, meta = image_map))
 
