@@ -17,7 +17,7 @@ immosaic(
         c(s, rep(mscale/2, floor(1/mscale)))     }     else {         scales     } },
   max_images = 2000,
   min_scale = 0.05,
-  bg = "white",
+  bg = "transparent",
   show_every = 25,
   ...
 )

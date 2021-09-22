@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The goal of immosaic is to ...
+The goal of immosaic is to create packed image mosaic. The main function `immosaic`, takes a set of images, or a function that generates images and packs them into a larger image as tightly as possible, scaling as necessary, using a greedy algorithm (so don't expect it to be fast!). It is largely based on []
 
 ## Installation
 

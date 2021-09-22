@@ -22,6 +22,8 @@
 #' @return
 #' @export
 #'
+#' @importFrom imager %inr%
+#'
 #' @examples
 immosaic <- function(im, width = 1024, height = 800,
                      mask = NULL,
@@ -171,7 +173,7 @@ immosaic <- function(im, width = 1024, height = 800,
       pset <- imager::imeval(mask, ~ x %inr% xr & y %inr% yr)
 
       sub_mask <- imager::crop.bbox(mask, pset)
-      img_mask <- channel(resized_img, 4)
+      img_mask <- imager::channel(resized_img, 4)
 
       if(any(dim(img_mask)[1:2] != dim(sub_mask)[1:2])) {
         needs_resize <- TRUE
@@ -190,8 +192,13 @@ immosaic <- function(im, width = 1024, height = 800,
       if(needs_resize) {
         resized_img <- imager::resize(resized_img, imager::width(sub_mask), imager::height(sub_mask))
       }
+
+      #canvas_cropped <- imager::crop.bbox(canvas, pset)
       new_img <- imager::add(list(imager::crop.bbox(canvas, pset), resized_img))
       canvas[pset] <- new_img
+      #transp <- imager::channel(canvas_cropped, 4) > 0
+      #canvas[pset][transp] <- resized_img[transp]
+
       ## regenerate mask
       mask <- imager::channel(canvas, 4)
       success <- TRUE
