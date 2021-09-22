@@ -92,3 +92,10 @@ generate_platonic <- function(i, width = 200, height = 200, cols = rainbow(100))
 }
 
 ```
+
+test:
+
+```{r make_platonic}
+test <- immosaic(generate_platonic, progress = FALSE)
+plot(test)
+```
