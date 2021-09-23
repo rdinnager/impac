@@ -40,6 +40,10 @@
 #' @return A packed image mosaic, as a [`imager::cimg`] object.
 #' @export
 #'
+#' @importFrom imager %inr%
+#' @importFrom grDevices col2rgb
+#' @importFrom stats runif
+#'
 #' @examples
 #' plot(
 #'   immosaic(
@@ -194,8 +198,8 @@ immosaic <- function(im, width = 1024, height = 800,
       }
 
       resized_img = imager::resize(img, w, h, interpolation_type = 6)
-      resized_img <- imchange(resized_img, ~ . < 0, ~ 0)
-      resized_img <- imchange(resized_img, ~ . > 1, ~ 1)
+      resized_img <- imager::imchange(resized_img, ~ . < 0, ~ 0)
+      resized_img <- imager::imchange(resized_img, ~ . > 1, ~ 1)
 
       wh <- round(0.5 * w)
       hh <- round(0.5 * h)
@@ -205,14 +209,14 @@ immosaic <- function(im, width = 1024, height = 800,
       pset <- imager::imeval(mask, ~ x %inr% xr & y %inr% yr)
 
       sub_mask <- imager::crop.bbox(mask, pset)
-      img_mask <- channel(resized_img, 4)
+      img_mask <- imager::channel(resized_img, 4)
 
       if(any(dim(img_mask)[1:2] != dim(sub_mask)[1:2])) {
         needs_resize <- TRUE
         img_mask <- imager::resize(img_mask, imager::width(sub_mask), imager::height(sub_mask),
                                    interpolation_type = 6)
-        img_mask <- imchange(img_mask, ~ . < 0, ~ 0)
-        img_mask <- imchange(img_mask, ~ . > 1, ~ 1)
+        img_mask <- imager::imchange(img_mask, ~ . < 0, ~ 0)
+        img_mask <- imager::imchange(img_mask, ~ . > 1, ~ 1)
       }
 
       composite <- any(imager::parmin(list(sub_mask, img_mask)) > 0)
@@ -227,8 +231,8 @@ immosaic <- function(im, width = 1024, height = 800,
       ## paste image into canvas
       if(needs_resize) {
         resized_img <- imager::resize(resized_img, imager::width(sub_mask), imager::height(sub_mask))
-        resized_img <- imchange(resized_img, ~ . < 0, ~ 0)
-        resized_img <- imchange(resized_img, ~ . > 1, ~ 1)
+        resized_img <- imager::imchange(resized_img, ~ . < 0, ~ 0)
+        resized_img <- imager::imchange(resized_img, ~ . > 1, ~ 1)
       }
       new_img <- imager::add(list(imager::crop.bbox(canvas, pset), resized_img))
       canvas[pset] <- new_img
