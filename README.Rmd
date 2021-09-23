@@ -36,6 +36,7 @@ devtools::install_github("rdinnager/immosaic")
 library(immosaic)
 library(Rvcg)
 library(rgl)
+library(rphylopic)
 ```
 
 ```{r gen_shapes}

@@ -22,5 +22,6 @@ Suggests:
     roxygen2,
     rmarkdown,
     Rvcg,
-    rgl
+    rgl,
+    rphylopic
     
