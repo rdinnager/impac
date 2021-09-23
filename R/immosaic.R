@@ -7,29 +7,58 @@
 #' @param im Can be either a character vector of image
 #' file names (format must be compatible with [imager::load.image()]),
 #' a list of [`imager::cimg`] objects, or a function that generates
-#' an image when evaluated. Tje function can take a single argument,
+#' an image when evaluated. The function can take a single argument,
 #' which is the current iteration of the packing algorithm. Can also
 #' be specified as an `rlang` style lambda syntax (see [rlang::as_function()]).
 #' @param width Width in pixels of produced image
 #' @param height Height in pixels of produced image
 #' @param mask An optional masking image.
-#' @param weights
-#' @param preferred
-#' @param max_num_tries
-#' @param scales
-#' @param scale_fun
+#' @param weights Vector of Weights to apply to each image. Higher weighted
+#' images will  be packed first and so will tend to be larger. This vector
+#' will be recycled.
+#' @param preferred An alternate way to specify images to pack first, as
+#' a character vector of names or file names (only works if `im` is a
+#' vector of image file name or a list of [`imager::cimg`] objects).
+#' @param max_num_tries Maximum number of times to try packing an image
+#' onto the canvas before giving up.
+#' @param scales A vector of starting scaling factors to randomly choose
+#' from for each image.
+#' @param scale_fun An function that takes three arguments,
+#' which correspond to the current vector of scaling factors, the current
+#' iteration of the algorithm, and the count of the number of packed images
+#' so far, respectively (e.g. `f(s, i, c)`), and returns a new vector of
+#' scaling factors to use.
+#' @param max_images The maximum number of images to pack before stopping.
+#' @param min_scale The minimum scale factor to use. If the algorithm
+#' generates a scale factor this small (via `scale_fun`), packing will stop.
+#' @param bg The background colour for the campus, default: "transparent"
+#' @param show_every Show the intermediate packed image after every
+#' `show_every` images are packed. Set to 0 to not show intermediates.
+#' @param progress Should progress be printed as the algorithm runs?
+#' @param ... Further arguments passed on the `im`, if it is function.
 #'
-#' @return
+#' @return A packed image mosaic, as a [`imager::cimg`] object.
 #' @export
 #'
 #' @examples
+#' plot(
+#'   immosaic(
+#'     function(i) imager::draw_circle(
+#'       imager::imfill(500, 500, val = c(0, 0, 0, 0)),
+#'       250, 250, radius = runif(1, 150, 250),
+#'       color = matrix(grDevices::col2rgb(sample(grDevices::rainbow(100), 1), alpha = TRUE), nrow = 1)
+#'     ),
+#'     width = 400, height = 400,
+#'     max_images = 10, bg = "white",
+#'   )$image
+#' )
 immosaic <- function(im, width = 1024, height = 800,
                      mask = NULL,
                      weights = NULL,
                      preferred = NULL,
                      max_num_tries = 100,
                      scales = c(rep(0.5, 2), rep(0.25, 4), rep(0.15, 8)),
-                     scale_fun = function(i, s, c) {
+                     scale_fun = function(s, i, c) {
                        if(c < (i * 0.5)) {
                           mscale <- min(s)
                           c(s, rep(mscale / 2, floor(1 / mscale)))
@@ -229,7 +258,7 @@ immosaic <- function(im, width = 1024, height = 800,
       im_env$saved_image <- canvas
     }
 
-    scales <- scale_fun(i, scales, count)
+    scales <- scale_fun(scales, i, count)
 
     mscale = min(scales)
     if(mscale < min_scale) {

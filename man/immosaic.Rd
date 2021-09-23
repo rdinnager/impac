@@ -13,7 +13,7 @@ immosaic(
   preferred = NULL,
   max_num_tries = 100,
   scales = c(rep(0.5, 2), rep(0.25, 4), rep(0.15, 8)),
-  scale_fun = function(i, s, c) {     if (c < (i * 0.5)) {         mscale <- min(s)    
+  scale_fun = function(s, i, c) {     if (c < (i * 0.5)) {         mscale <- min(s)    
         c(s, rep(mscale/2, floor(1/mscale)))     }     else {         scales     } },
   max_images = 1000,
   min_scale = 0.05,
@@ -27,7 +27,7 @@ immosaic(
 \item{im}{Can be either a character vector of image
 file names (format must be compatible with \code{\link[imager:load.image]{imager::load.image()}}),
 a list of \code{\link[imager:cimg]{imager::cimg}} objects, or a function that generates
-an image when evaluated. Tje function can take a single argument,
+an image when evaluated. The function can take a single argument,
 which is the current iteration of the packing algorithm. Can also
 be specified as an \code{rlang} style lambda syntax (see \code{\link[rlang:as_function]{rlang::as_function()}}).}
 
@@ -37,13 +37,58 @@ be specified as an \code{rlang} style lambda syntax (see \code{\link[rlang:as_fu
 
 \item{mask}{An optional masking image.}
 
-\item{scale_fun}{}
+\item{weights}{Vector of Weights to apply to each image. Higher weighted
+images will  be packed first and so will tend to be larger. This vector
+will be recycled.}
+
+\item{preferred}{An alternate way to specify images to pack first, as
+a character vector of names or file names (only works if \code{im} is a
+vector of image file name or a list of \code{\link[imager:cimg]{imager::cimg}} objects).}
+
+\item{max_num_tries}{Maximum number of times to try packing an image
+onto the canvas before giving up.}
+
+\item{scales}{A vector of starting scaling factors to randomly choose
+from for each image.}
+
+\item{scale_fun}{An function that takes three arguments,
+which correspond to the current vector of scaling factors, the current
+iteration of the algorithm, and the count of the number of packed images
+so far, respectively (e.g. \code{f(s, i, c)}), and returns a new vector of
+scaling factors to use.}
+
+\item{max_images}{The maximum number of images to pack before stopping.}
+
+\item{min_scale}{The minimum scale factor to use. If the algorithm
+generates a scale factor this small (via \code{scale_fun}), packing will stop.}
+
+\item{bg}{The background colour for the campus, default: "transparent"}
+
+\item{show_every}{Show the intermediate packed image after every
+\code{show_every} images are packed. Set to 0 to not show intermediates.}
+
+\item{progress}{Should progress be printed as the algorithm runs?}
+
+\item{...}{Further arguments passed on the \code{im}, if it is function.}
 }
 \value{
-
+A packed image mosaic, as a \code{\link[imager:cimg]{imager::cimg}} object.
 }
 \description{
 A simple greedy algorithm tries to pack as many images
 into a larger image as possible, taking into account
 transparency, if available (recommended).
+}
+\examples{
+plot(
+  immosaic(
+    function(i) imager::draw_circle(
+      imager::imfill(500, 500, val = c(0, 0, 0, 0)),
+      250, 250, radius = runif(1, 150, 250),
+      color = matrix(grDevices::col2rgb(sample(grDevices::rainbow(100), 1), alpha = TRUE), nrow = 1)
+    ),
+    width = 400, height = 400,
+    max_images = 10, bg = "white",
+  )$image
+)
 }
