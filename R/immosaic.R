@@ -171,20 +171,16 @@ immosaic <- function(im, width = 1024, height = 800,
     success <- FALSE
     for(j in seq_len(max_num_tries)) {
 
-      needs_resize <- FALSE
-
-      x <- floor(runif(1, 0, width))
-      y <- floor(runif(1, 0, height))
+      x <- runif(1, 0, width)
+      y <- runif(1, 0, height)
       scale <- sample(scales, 1)
 
       if(i <= num_preferred) {
         scale <- min(1, scale * 2)
       }
 
-      w <- floor(imager::width(img) * scale)
-      h = floor(imager::height(img) * scale)
-      if(w %% 2 == 0) w <- w + 1
-      if(h %% 2 == 0) h <- h + 1
+      w <- as.integer(imager::width(img) * scale)
+      h <- as.integer(imager::height(img) * scale)
 
       if(w < 3 | h < 3) {
         next
@@ -201,23 +197,16 @@ immosaic <- function(im, width = 1024, height = 800,
       resized_img <- imager::imchange(resized_img, ~ . < 0, ~ 0)
       resized_img <- imager::imchange(resized_img, ~ . > 1, ~ 1)
 
-      wh <- round(0.5 * w)
-      hh <- round(0.5 * h)
-      xr <- c(x - wh, x + wh)
-      yr <- c(y - hh, y + hh)
+      w <- imager::width(resized_img)
+      h <- imager::height(resized_img)
 
-      pset <- imager::imeval(mask, ~ x %inr% xr & y %inr% yr)
+      xmin <- as.integer(max(1, x - 0.5 * w))
+      ymin <- as.integer(max(1, y - 0.5 * h))
+      xr <- c(xmin, xmin + w - 1L)
+      yr <- c(ymin, ymin + h - 1L)
 
-      sub_mask <- imager::crop.bbox(mask, pset)
+      sub_mask <- mask[xr[1]:xr[2], yr[1]:yr[2], , , drop = FALSE]
       img_mask <- imager::channel(resized_img, 4)
-
-      if(any(dim(img_mask)[1:2] != dim(sub_mask)[1:2])) {
-        needs_resize <- TRUE
-        img_mask <- imager::resize(img_mask, imager::width(sub_mask), imager::height(sub_mask),
-                                   interpolation_type = 6)
-        img_mask <- imager::imchange(img_mask, ~ . < 0, ~ 0)
-        img_mask <- imager::imchange(img_mask, ~ . > 1, ~ 1)
-      }
 
       composite <- any(imager::parmin(list(sub_mask, img_mask)) > 0)
 
@@ -229,13 +218,8 @@ immosaic <- function(im, width = 1024, height = 800,
       }
 
       ## paste image into canvas
-      if(needs_resize) {
-        resized_img <- imager::resize(resized_img, imager::width(sub_mask), imager::height(sub_mask))
-        resized_img <- imager::imchange(resized_img, ~ . < 0, ~ 0)
-        resized_img <- imager::imchange(resized_img, ~ . > 1, ~ 1)
-      }
-      new_img <- imager::add(list(imager::crop.bbox(canvas, pset), resized_img))
-      canvas[pset] <- new_img
+      new_img <- imager::add(list(canvas[xr[1]:xr[2], yr[1]:yr[2], , , drop = FALSE], resized_img))
+      canvas[xr[1]:xr[2], yr[1]:yr[2], , ] <- new_img
       ## regenerate mask
       mask <- imager::channel(canvas, 4)
       success <- TRUE
