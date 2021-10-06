@@ -40,9 +40,7 @@ First we load the packages we need for these examples:
 ``` r
 library(immosaic)
 library(Rvcg)
-#> Warning: package 'Rvcg' was built under R version 4.0.3
 library(rgl)
-#> Warning: package 'rgl' was built under R version 4.0.5
 library(rphylopic)
 ```
 
