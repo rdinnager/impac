@@ -41,8 +41,8 @@ jobs:
 
       - name: Install fftw on macOS-latest
         if: matrix.os == 'macOS-latest'
-          run: |
-            brew install fftw
+        run: |
+          brew install fftw
 
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
