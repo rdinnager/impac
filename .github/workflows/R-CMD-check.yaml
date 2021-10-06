@@ -39,10 +39,10 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
-      - name: Install fftw on macOS-latest
+      - name: Install XQuartz on macOS
         if: matrix.os == 'macOS-latest'
         run: |
-          brew install fftw
+          brew install xquartz --cask
 
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
