@@ -28,11 +28,11 @@ jobs:
 
       - name: Render Rmarkdown files
         run: |
-          Rscript -e 'for (f in commandArgs(TRUE)) if (file.exists(f)) rmarkdown::render(f)' Readme.Rmd
+          Rscript -e 'for (f in commandArgs(TRUE)) if (file.exists(f)) rmarkdown::render(f)' README.Rmd
 
       - name: Commit results
         run: |
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git commit Readme.md -m 'Re-build Readme file' || echo "No changes to commit"
+          git commit README.md man/figures/R_gems.png man/figures/phylopic_a_pack.png -m 'Re-build Readme file' || echo "No changes to commit"
           git push origin || echo "No changes to commit"

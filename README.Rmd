@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/rdinnager/immosaic/workflows/R-CMD-check/badge.svg)](https://github.com/rdinnager/immosaic/actions)
 <!-- badges: end -->
 
-The goal of immosaic is to create packed image mosaic. The main function `immosaic`, takes a set of images, or a function that generates images and packs them into a larger image as tightly as possible, scaling as necessary, using a greedy algorithm (so don't expect it to be fast!). It is inspired by [this python script](https://github.com/qnzhou/Mosaic]). The main upgrade in this package is the ability to feed the algorithm a generator function, which generates an images, as opposed to just a list of pre-existing images (though it can do this too).
+The goal of `{immosaic}` is to create packed image mosaics. The main function `immosaic`, takes a set of images, or a function that generates images and packs them into a larger image as tightly as possible, scaling as necessary, using a greedy algorithm (so don't expect it to be fast!). It is inspired by [this python script](https://github.com/qnzhou/Mosaic]). The main upgrade in this package is the ability to feed the algorithm a generator function, which generates an images, as opposed to just a list of pre-existing images (though it can do this too).
 
 ## Installation
 
@@ -105,8 +105,10 @@ Now we feed our function to the `immosaic()` function, which packs the generated
 
 ```{r make_platonic, out.width='85%'}
 shapes <- immosaic(generate_platonic, progress = FALSE, show_every = 0, bg = "white")
-plot(shapes)
+imager::save.image(shapes$image, "man/figures/R_gems.png")
 ```
+
+![Pretty R gems - Packed images of 3d shapes drawn with {rgl}](man/figures/R_gems.png)
 
 Now let's pack some Phylopic images! These are silhouettes of organisms from the [Phylopic](http://phylopic.org/) project. We will use the `rphylopic` package to grab a random Phylopic image for packing:
 
@@ -140,7 +142,9 @@ Now we run `immosaic` on our phylopic generating function:
 
 ```{r mosaic_phylopic, out.width='85%'}
 phylopics <- immosaic(get_phylopic, progress = FALSE, show_every = 0, bg = "white", min_scale = 0.01)
-plot(phylopics)
+imager::save.image(phylopics$image, "man/figures/phylopic_a_pack.png")
 ```
+
+![Packed images of organism silhouettes from Phylopic](man/figures/phylopic_a_pack.png)
 
 I am currently testing the above. Once I am sure it is working I will add some code to automatically print out the names of all the artists who produced the silhouette images above (credit where credit is due!).
