@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/rdinnager/immosaic/workflows/R-CMD-check/badge.svg)](https://github.com/rdinnager/immosaic/actions)
 <!-- badges: end -->
 
-The goal of immosaic is to create packed image mosaic. The main function `immosaic`, takes a set of images, or a function that generates images and packs them into a larger image as tightly as possible, scaling as necessary, using a greedy algorithm (so don't expect it to be fast!). It is largely based on []
+The goal of immosaic is to create packed image mosaic. The main function `immosaic`, takes a set of images, or a function that generates images and packs them into a larger image as tightly as possible, scaling as necessary, using a greedy algorithm (so don't expect it to be fast!). It is inspired by [this python script](https://github.com/qnzhou/Mosaic]). The main upgrade in this package is the ability to feed the algorithm a generator function, which generates an images, as opposed to just a list of pre-existing images (though it can do this too).
 
 ## Installation
 
@@ -32,12 +32,18 @@ devtools::install_github("rdinnager/immosaic")
 ```
 ## Example
 
+This document and hence the images below are regenerated once a day automatically. No two will ever be alike.
+
+First we load the packages we need for these examples:
+
 ```{r load_package}
 library(immosaic)
 library(Rvcg)
 library(rgl)
 library(rphylopic)
 ```
+
+Next we create an R function to generate an image. In this case, we use the package `rgl` to plot a simple 3d shape, chosen randomly from a set of possibilities:
 
 ```{r gen_shapes}
 
@@ -95,27 +101,46 @@ generate_platonic <- function(i, swidth = 200, sheight = 200, cols = rainbow(100
 
 ```
 
-test:
+Now we feed our function to the `immosaic()` function, which packs the generated images onto a canvas: 
 
-```{r make_platonic}
-test <- immosaic(generate_platonic, progress = FALSE, show_every = 0, bg = "white")
-plot(test)
+```{r make_platonic, out.width='85%'}
+shapes <- immosaic(generate_platonic, progress = FALSE, show_every = 0, bg = "white")
+plot(shapes)
 ```
 
-Now let's pack some Phylopic images! We will use the `rphylopic` package to grab a random Phylopic image for packing:
+Now let's pack some Phylopic images! These are silhouettes of organisms from the [Phylopic](http://phylopic.org/) project. We will use the `rphylopic` package to grab a random Phylopic image for packing:
 
 ```{r get_phylopic}
 all_images <- rphylopic::image_list(1, 10000)
 all_images <- unlist(all_images)
-get_phylopic <- function(i, iwid = 200, iheight = 200, isize = 1024) {
-  isize <- sum(iwid, iheight) / 2
+get_phylopic <- function(i, max_size = 400, isize = 1024) {
   fail <- TRUE
   while(fail) {
-    pp <- try(rphylopic::image_data(sample(all_images, 1), isize))
+    pp <- try(rphylopic::image_data(sample(all_images, 1), isize), silent = TRUE)
     if(!inherits(pp, "try-error")) {
       fail <- FALSE
     }
   }
-  
+  rot <- aperm(pp$uid, c(2, 1, 3))
+  dims <- dim(rot)
+  im <- imager::as.cimg(as.vector(rot), dim = c(dims[1], dims[2], 1, dims[3]))
+  max_dim <- which.max(dims[1:2])
+  other_dim <- (max_size / dims[max_dim]) * dims[1:2][-max_dim]
+  new_size <- c(0, 0)
+  new_size[max_dim] <- max_size
+  new_size[-max_dim] <- other_dim
+  im <- imager::resize(im, new_size[1], new_size[2], interpolation_type = 6)
+  im <- imager::imchange(im, ~ . < 0, ~ 0)
+  im <- imager::imchange(im, ~ . > 1, ~ 1)
+  im
 }
 ```
+
+Now we run `immosaic` on our phylopic generating function:
+
+```{r mosaic_phylopic, out.width='85%'}
+phylopics <- immosaic(get_phylopic, progress = FALSE, show_every = 0, bg = "white", min_scale = 0.01)
+plot(phylopics)
+```
+
+I am currently testing the above. Once I am sure it is working I will add some code to automatically print out the names of all the artists who produced the silhouette images above (credit where credit is due!).
