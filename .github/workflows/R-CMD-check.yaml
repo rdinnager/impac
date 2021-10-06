@@ -40,7 +40,7 @@ jobs:
           use-public-rspm: true
 
       - name: Install XQuartz on macOS
-        if: matrix.os == 'macOS-latest'
+        if: runner.os == 'macOS'
         run: |
           brew install xquartz --cask
 
