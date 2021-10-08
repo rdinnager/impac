@@ -165,6 +165,12 @@ immosaic <- function(im, width = 1024, height = 800,
     }
     if(im_type == "function") {
       img <- im(i, ...)
+      if(rlang::is_list(img)) {
+        meta <- unlist(img[-1])
+        img <- img[[1]]
+      } else {
+        meta <- NULL
+      }
       #img <- im(i)
     }
 
@@ -223,7 +229,7 @@ immosaic <- function(im, width = 1024, height = 800,
       ## regenerate mask
       mask <- imager::channel(canvas, 4)
       success <- TRUE
-      image_map <- rbind(image_map, c(x = x, y = y, image = i))
+      image_map <- rbind(image_map, c(x = x, y = y, image = i, meta))
 
       break
 
