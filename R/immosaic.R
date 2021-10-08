@@ -145,7 +145,7 @@ immosaic <- function(im, width = 1024, height = 800,
     im <- sample(im, prob = weights)
   }
 
-  image_map <- data.frame(x = NA, y = NA, image = NA)
+  image_map <- data.frame(NULL)
   count <- 0
 
   if(progress) {
@@ -166,7 +166,7 @@ immosaic <- function(im, width = 1024, height = 800,
     if(im_type == "function") {
       img <- im(i, ...)
       if(rlang::is_list(img)) {
-        meta <- unlist(img[-1])
+        meta <- img[-1]
         img <- img[[1]]
       } else {
         meta <- NULL
@@ -229,7 +229,8 @@ immosaic <- function(im, width = 1024, height = 800,
       ## regenerate mask
       mask <- imager::channel(canvas, 4)
       success <- TRUE
-      image_map <- rbind(image_map, c(x = x, y = y, image = i, meta))
+      dat <- do.call(data.frame, c(list(x = x, y = y, scale = scale, image = i), meta))
+      image_map <- rbind(image_map, dat)
 
       break
 

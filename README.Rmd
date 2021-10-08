@@ -118,7 +118,8 @@ all_images <- unlist(all_images)
 get_phylopic <- function(i, max_size = 400, isize = 1024) {
   fail <- TRUE
   while(fail) {
-    pp <- try(rphylopic::image_data(sample(all_images, 1), isize), silent = TRUE)
+    uuid <- sample(all_images, 1)
+    pp <- try(rphylopic::image_data(uuid, isize), silent = TRUE)
     if(!inherits(pp, "try-error")) {
       fail <- FALSE
     }
@@ -134,7 +135,8 @@ get_phylopic <- function(i, max_size = 400, isize = 1024) {
   im <- imager::resize(im, new_size[1], new_size[2], interpolation_type = 6)
   im <- imager::imchange(im, ~ . < 0, ~ 0)
   im <- imager::imchange(im, ~ . > 1, ~ 1)
-  im
+  ## this adds custom metadata
+  list(im, uuid = uuid)
 }
 ```
 
@@ -146,5 +148,27 @@ imager::save.image(phylopics$image, "man/figures/phylopic_a_pack.png")
 ```
 
 ![Packed images of organism silhouettes from Phylopic](man/figures/phylopic_a_pack.png)
+
+Now we extract the artists who made the above images using the uid of image.
+
+```{r get_artist}
+image_dat <- lapply(phylopics$meta$uuid, 
+                    function(x) {Sys.sleep(0.5); rphylopic::image_get(x, options = c("credit"))$credit})
+```
+
+```{r print_credit, echo=FALSE, comment="", results='asis'}
+image_dat <- unlist(lapply(image_dat, function(x) ifelse(is.null(x), NA, x)))
+cat("## Artists whose work is showcased:\n")
+cat(paste(na.omit(unique(image_dat)), collapse = ", "))
+cat("\n\n## Detailed credit:\n")
+```
+
+```{r tab, echo=FALSE}
+knitr::kable(data.frame(num = seq_along(image_dat), 
+                        x = phylopics$meta$x, 
+                        y = phylopics$meta$y, 
+                        artist = image_dat),
+             col.names = c("", "Image X Coord", "Image Y Coord", "Credit"))
+```
 
 I am currently testing the above. Once I am sure it is working I will add some code to automatically print out the names of all the artists who produced the silhouette images above (credit where credit is due!).
