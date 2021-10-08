@@ -171,4 +171,3 @@ knitr::kable(data.frame(num = seq_along(image_dat),
              col.names = c("", "Image X Coord", "Image Y Coord", "Credit"))
 ```
 
-I am currently testing the above. Once I am sure it is working I will add some code to automatically print out the names of all the artists who produced the silhouette images above (credit where credit is due!).
