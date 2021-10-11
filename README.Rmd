@@ -171,3 +171,12 @@ knitr::kable(data.frame(num = seq_along(image_dat),
              col.names = c("", "Image X Coord", "Image Y Coord", "Credit"))
 ```
 
+```{r send_tweet, echo=FALSE, results='hide'}
+auth <- rtweet::rtweet_bot(api_key = Sys.getenv("TWITTER_AP_KEY"),
+                           api_secret = Sys.getenv("TWITTER_APP_SECRET"),
+                           access_token = Sys.getenv("TWITTER_APP_TOKEN"),
+                           access_secret = Sys.getenv("TWITTER_APP_TOKEN_SECRET"))
+rtweet::auth_as(auth)
+rtweet::post_tweet("A packed image mosaic of @PhyloPic images generated with the {immosaic} package (https://github.com/rdinnager/immosaic). If you like this image please visit http://phylopic.org/ to check out more images and consider supporting them with a donation. Artists showcased: https://github.com/rdinnager/immosaic#artists-whose-work-is-showcased", 
+                   media = "man/figures/phylopic_a_pack.png")
+```
