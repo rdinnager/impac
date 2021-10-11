@@ -28,7 +28,7 @@ jobs:
 
       - name: Render Rmarkdown files
         env:
-          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_APP_KEY: ${{ secrets.TWITTER_APP_KEY }}
           TWITTER_APP_SECRET: ${{ secrets.TWITTER_APP_SECRET }}
           TWITTER_APP_TOKEN: ${{ secrets.TWITTER_APP_TOKEN }}
           TWITTER_APP_TOKEN_SECRET: ${{ secrets.TWITTER_APP_TOKEN_SECRET }}

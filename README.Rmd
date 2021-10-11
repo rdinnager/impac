@@ -172,7 +172,7 @@ knitr::kable(data.frame(num = seq_along(image_dat),
 ```
 
 ```{r send_tweet, echo=FALSE, results='hide'}
-auth <- rtweet::rtweet_bot(api_key = Sys.getenv("TWITTER_AP_KEY"),
+auth <- rtweet::rtweet_bot(api_key = Sys.getenv("TWITTER_APP_KEY"),
                            api_secret = Sys.getenv("TWITTER_APP_SECRET"),
                            access_token = Sys.getenv("TWITTER_APP_TOKEN"),
                            access_secret = Sys.getenv("TWITTER_APP_TOKEN_SECRET"))

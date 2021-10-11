@@ -2,11 +2,11 @@ Package: immosaic
 Title: What the Package Does (One Line, Title Case)
 Version: 0.1.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person(given = "Russell",
+           family = "Dinnage",
+           role = c("aut", "cre", "cph"),
+           email = "r.dinnage@gmail.com",
+           comment = c(ORCID = "0000-0003-0846-2819"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8
