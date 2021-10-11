@@ -27,3 +27,5 @@ Suggests:
     testthat (>= 3.0.0),
     rtweet
 Config/testthat/edition: 3
+Remotes: 
+    ropensci/rtweet
