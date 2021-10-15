@@ -23,6 +23,10 @@ jobs:
       - name: Setup R
         uses: r-lib/actions/setup-r@v1
 
+      - name: Install igraph system dependencies
+        run: |
+          pacman -Sy --noconfirm mingw-w64-i686-glpk mingw-w64-i686-libxml2 mingw-w64-i686-gmp mingw-w64-x86_64-glpk mingw-w64-x86_64-libxml2 mingw-w64-x86_64-gmp
+
       - name: Setup Dependencies
         uses: r-lib/actions/setup-r-dependencies@v1
 
