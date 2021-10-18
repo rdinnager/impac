@@ -251,9 +251,9 @@ immosaic <- function(im, width = 1024, height = 800,
         }
       }
       im_env$saved_image <- canvas
+    } else {
+      scales <- scale_fun(scales, i, count)
     }
-
-    scales <- scale_fun(scales, i, count)
 
     mscale = min(scales)
     if(mscale < min_scale) {
