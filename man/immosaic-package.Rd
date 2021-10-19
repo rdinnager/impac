@@ -2,14 +2,14 @@
 % Please edit documentation in R/immosaic-package.R
 \docType{package}
 \name{immosaic-package}
-\alias{immosaic}
 \alias{immosaic-package}
+\alias{_PACKAGE}
 \title{immosaic: What the Package Does (One Line, Title Case)}
 \description{
 What the package does (one paragraph).
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Russell Dinnage \email{r.dinnage@gmail.com} (\href{https://orcid.org/0000-0003-0846-2819}{ORCID}) [copyright holder]
 
 }
 \keyword{internal}

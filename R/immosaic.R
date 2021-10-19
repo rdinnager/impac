@@ -251,6 +251,7 @@ immosaic <- function(im, width = 1024, height = 800,
         }
       }
       im_env$saved_image <- canvas
+      im_env$meta <- image_map
     } else {
       scales <- scale_fun(scales, i, count)
     }
