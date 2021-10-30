@@ -1,4 +1,4 @@
 library(testthat)
-library(immosaic)
+library(impac)
 
-test_check("immosaic")
+test_check("impac")

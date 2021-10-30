@@ -1,17 +1,17 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# immosaic
+# impac
 
 <!-- badges: start -->
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/rdinnager/immosaic/workflows/R-CMD-check/badge.svg)](https://github.com/rdinnager/immosaic/actions)
+[![R-CMD-check](https://github.com/rdinnager/impac/workflows/R-CMD-check/badge.svg)](https://github.com/rdinnager/impac/actions)
 <!-- badges: end -->
 
-The goal of `{immosaic}` is to create packed image mosaics. The main
-function `immosaic`, takes a set of images, or a function that generates
+The goal of `{impac}` is to create packed image mosaics. The main
+function `impac`, takes a set of images, or a function that generates
 images and packs them into a larger image as tightly as possible,
 scaling as necessary, using a greedy algorithm (so don’t expect it to be
 fast\!). It is inspired by [this python
@@ -27,7 +27,7 @@ You can install the development version from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("rdinnager/immosaic")
+devtools::install_github("rdinnager/impac")
 ```
 
 ## Example
@@ -38,7 +38,7 @@ automatically. No two will ever be alike.
 First we load the packages we need for these examples:
 
 ``` r
-library(immosaic)
+library(impac)
 library(Rvcg)
 library(rgl)
 library(rphylopic)
@@ -103,11 +103,11 @@ generate_platonic <- function(i, swidth = 200, sheight = 200, cols = rainbow(100
 }
 ```
 
-Now we feed our function to the `immosaic()` function, which packs the
+Now we feed our function to the `impac()` function, which packs the
 generated images onto a canvas:
 
 ``` r
-shapes <- immosaic(generate_platonic, progress = FALSE, show_every = 0, bg = "white")
+shapes <- impac(generate_platonic, progress = FALSE, show_every = 0, bg = "white")
 imager::save.image(shapes$image, "man/figures/R_gems.png")
 ```
 
@@ -146,10 +146,10 @@ get_phylopic <- function(i, max_size = 400, isize = 1024) {
 }
 ```
 
-Now we run `immosaic` on our phylopic generating function:
+Now we run `impac` on our phylopic generating function:
 
 ``` r
-phylopics <- immosaic(get_phylopic, progress = FALSE, show_every = 0, bg = "white", min_scale = 0.01)
+phylopics <- impac(get_phylopic, progress = FALSE, show_every = 0, bg = "white", min_scale = 0.01)
 imager::save.image(phylopics$image, "man/figures/phylopic_a_pack.png")
 ```
 

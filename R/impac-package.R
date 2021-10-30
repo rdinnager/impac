@@ -1,5 +1,5 @@
 #' @keywords internal
-#' @aliases immosaic-package
+#' @aliases impac-package
 "_PACKAGE"
 
 # The following block is used by usethis to automatically manage

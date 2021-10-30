@@ -1,9 +1,9 @@
-test_that("immosaic produces the same image", {
+test_that("impac produces the same image", {
 
   set.seed(3717)
 
   imager::save.image(
-    immosaic(
+    impac(
       function(i) imager::draw_circle(
         imager::imfill(500, 500, val = c(0, 0, 0, 0)),
         250, 250, radius = runif(1, 150, 250),
@@ -22,7 +22,7 @@ test_that("immosaic produces the same image", {
 test_that("adding metadata works", {
 
 
-  x <- immosaic(
+  x <- impac(
       function(i) {
         ccol <- sample(grDevices::rainbow(100), 1)
         list(imager::draw_circle(

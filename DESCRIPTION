@@ -1,4 +1,4 @@
-Package: immosaic
+Package: impac
 Title: Make packed image mosaics
 Version: 0.1.0.9000
 Authors@R: 
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre", "cph"),
            email = "r.dinnage@gmail.com",
            comment = c(ORCID = "0000-0003-0846-2819"))
-Description: immosaic takes a list of images or a function that generates images and 
+Description: impac takes a list of images or a function that generates images and 
     packs them onto a canvas using a greedy algorithm, while respecting transparency.
 License: MIT + file LICENSE
 Encoding: UTF-8

@@ -12,3 +12,5 @@ convert_to_rgba <- function(img) {
 
   img
 }
+
+

@@ -46,7 +46,7 @@
 #'
 #' @examples
 #' plot(
-#'   immosaic(
+#'   impac(
 #'     function(i) imager::draw_circle(
 #'       imager::imfill(500, 500, val = c(0, 0, 0, 0)),
 #'       250, 250, radius = runif(1, 150, 250),
@@ -56,7 +56,7 @@
 #'     max_images = 10, bg = "white",
 #'   )$image
 #' )
-immosaic <- function(im, width = 1024, height = 800,
+impac <- function(im, width = 1024, height = 800,
                      mask = NULL,
                      weights = NULL,
                      preferred = NULL,
@@ -272,6 +272,9 @@ immosaic <- function(im, width = 1024, height = 800,
     pr$terminate()
   }
 
-  return(list(image = canvas, meta = image_map))
+  res <- list(image = canvas, meta = image_map)
+  class(res) <- "impac"
+
+  return(res)
 
 }
