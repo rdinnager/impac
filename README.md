@@ -1,52 +1,54 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # impac
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/rdinnager/impac/workflows/R-CMD-check/badge.svg)](https://github.com/rdinnager/impac/actions)
 <!-- badges: end -->
 
-The goal of `{impac}` is to create packed image mosaics. The main function `impac`, takes a set of images, or a function that generates images and packs them into a larger image as tightly as possible, scaling as necessary, using a greedy algorithm (so don't expect it to be fast!). It is inspired by [this python script](https://github.com/qnzhou/Mosaic]). The main upgrade in this package is the ability to feed the algorithm a generator function, which generates an images, as opposed to just a list of pre-existing images (though it can do this too).
+The goal of `{impac}` is to create packed image mosaics. The main
+function `impac`, takes a set of images, or a function that generates
+images and packs them into a larger image as tightly as possible,
+scaling as necessary, using a greedy algorithm (so don’t expect it to be
+fast!). It is inspired by [this python
+script](https://github.com/qnzhou/Mosaic%5D). The main upgrade in this
+package is the ability to feed the algorithm a generator function, which
+generates an images, as opposed to just a list of pre-existing images
+(though it can do this too).
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/) with:
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("rdinnager/impac")
 ```
+
 ## Example
 
-This document and hence the images below are regenerated once a day automatically. No two will ever be alike.
+This document and hence the images below are regenerated once a day
+automatically. No two will ever be alike.
 
 First we load the packages we need for these examples:
 
-```{r load_package}
+``` r
 library(impac)
 library(Rvcg)
 library(rgl)
 library(rphylopic)
 ```
 
-Next we create an R function to generate an image. In this case, we use the package `rgl` to plot a simple 3d shape, chosen randomly from a set of possibilities:
+Next we create an R function to generate an image. In this case, we use
+the package `rgl` to plot a simple 3d shape, chosen randomly from a set
+of possibilities:
 
-```{r gen_shapes}
-
+``` r
 generate_platonic <- function(i, swidth = 200, sheight = 200, cols = rainbow(100)) {
   
   shape <- sample(c("sphere",
@@ -98,21 +100,24 @@ generate_platonic <- function(i, swidth = 200, sheight = 200, cols = rainbow(100
   im  
  
 }
-
 ```
 
-Now we feed our function to the `impac()` function, which packs the generated images onto a canvas: 
+Now we feed our function to the `impac()` function, which packs the
+generated images onto a canvas:
 
-```{r make_platonic, out.width='85%'}
+``` r
 shapes <- impac(generate_platonic, progress = FALSE, show_every = 0, bg = "white")
 imager::save.image(shapes$image, "man/figures/R_gems.png")
 ```
 
-![Pretty R gems - Packed images of 3d shapes drawn with {rgl}](man/figures/R_gems.png)
+![Pretty R gems - Packed images of 3d shapes drawn with
+{rgl}](man/figures/R_gems.png)
 
-Now let's pack some Phylopic images! These are silhouettes of organisms from the [Phylopic](http://phylopic.org/) project. We will use the `rphylopic` package to grab a random Phylopic image for packing:
+Now let’s pack some Phylopic images! These are silhouettes of organisms
+from the [Phylopic](http://phylopic.org/) project. We will use the
+`rphylopic` package to grab a random Phylopic image for packing:
 
-```{r get_phylopic}
+``` r
 all_images <- rphylopic::image_list(1, 10000)
 all_images <- unlist(all_images)
 get_phylopic <- function(i, max_size = 400, isize = 1024) {
@@ -142,45 +147,18 @@ get_phylopic <- function(i, max_size = 400, isize = 1024) {
 
 Now we run `impac` on our phylopic generating function:
 
-```{r mosaic_phylopic, out.width='85%'}
+``` r
 phylopics <- impac(get_phylopic, progress = FALSE, show_every = 0, bg = "white", min_scale = 0.01)
 imager::save.image(phylopics$image, "man/figures/phylopic_a_pack.png")
 ```
 
-![Packed images of organism silhouettes from Phylopic](man/figures/phylopic_a_pack.png)
+![Packed images of organism silhouettes from
+Phylopic](man/figures/phylopic_a_pack.png)
 
-Now we extract the artists who made the above images using the uid of image.
+Now we extract the artists who made the above images using the uid of
+image.
 
-```{r get_artist}
+``` r
 image_dat <- lapply(phylopics$meta$uuid, 
                     function(x) {Sys.sleep(2); rphylopic::image_get(x, options = c("credit"))$credit})
-```
-
-```{r post_tweet, echo=FALSE, results='hide'}
-post_tweet <- Sys.getenv("POST_TWEET")==1
-```
-
-```{r print_credit, echo=FALSE, comment="", results='asis', eval=post_tweet}
-image_dat <- unlist(lapply(image_dat, function(x) ifelse(is.null(x), NA, x)))
-cat("## Artists whose work is showcased:\n")
-cat(paste(na.omit(unique(image_dat)), collapse = ", "))
-cat("\n\n## Detailed credit:\n")
-```
-
-```{r tab, echo=FALSE, eval=post_tweet}
-knitr::kable(data.frame(num = seq_along(image_dat), 
-                        x = phylopics$meta$x, 
-                        y = phylopics$meta$y, 
-                        artist = image_dat),
-             col.names = c("", "Image X Coord", "Image Y Coord", "Credit"))
-```
-
-```{r send_tweet, echo=FALSE, results='hide', eval=post_tweet}
-auth <- rtweet::rtweet_bot(api_key = Sys.getenv("TWITTER_APP_KEY"),
-                           api_secret = Sys.getenv("TWITTER_APP_SECRET"),
-                           access_token = Sys.getenv("TWITTER_APP_TOKEN"),
-                           access_secret = Sys.getenv("TWITTER_APP_TOKEN_SECRET"))
-rtweet::auth_as(auth)
-rtweet::post_tweet("A packed image mosaic of @PhyloPic images generated with the {impac} package (https://github.com/rdinnager/impac). If you like this image please visit http://phylopic.org/ to check out more images and consider supporting them with a donation. Artists showcased: https://github.com/rdinnager/impac#artists-whose-work-is-showcased", 
-                   media = "man/figures/phylopic_a_pack.png")
 ```
