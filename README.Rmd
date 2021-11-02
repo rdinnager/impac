@@ -153,7 +153,7 @@ Now we extract the artists who made the above images using the uid of image.
 
 ```{r get_artist}
 image_dat <- lapply(phylopics$meta$uuid, 
-                    function(x) {Sys.sleep(0.5); rphylopic::image_get(x, options = c("credit"))$credit})
+                    function(x) {Sys.sleep(2); rphylopic::image_get(x, options = c("credit"))$credit})
 ```
 
 ```{r print_credit, echo=FALSE, comment="", results='asis'}
@@ -171,7 +171,7 @@ knitr::kable(data.frame(num = seq_along(image_dat),
              col.names = c("", "Image X Coord", "Image Y Coord", "Credit"))
 ```
 
-```{r send_tweet, echo=FALSE, results='hide'}
+```{r send_tweet, echo=FALSE, results='hide', eval=Sys.getenv("POST_TWEET")==1}
 auth <- rtweet::rtweet_bot(api_key = Sys.getenv("TWITTER_APP_KEY"),
                            api_secret = Sys.getenv("TWITTER_APP_SECRET"),
                            access_token = Sys.getenv("TWITTER_APP_TOKEN"),
