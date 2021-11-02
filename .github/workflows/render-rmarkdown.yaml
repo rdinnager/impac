@@ -28,6 +28,8 @@ jobs:
 
       - name: Setup Dependencies
         uses: r-lib/actions/setup-r-dependencies@v1
+        with:
+          cache-version: 2
 
       - name: Render Rmarkdown files
         env:

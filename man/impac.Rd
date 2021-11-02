@@ -20,6 +20,7 @@ impac(
   bg = "transparent",
   show_every = 25,
   progress = TRUE,
+  start_image = NULL,
   ...
 )
 }
@@ -69,6 +70,11 @@ generates a scale factor this small (via \code{scale_fun}), packing will stop.}
 
 \item{progress}{Should progress be printed as the algorithm runs?}
 
+\item{start_image}{An optional image to start the packing with. If not
+\code{NULL}, the \code{width} and \code{height} arguments will be ignored and the
+dimensions of the starting image used instead. Can be an \code{imager::cimg}
+object, a path to an image in png or jpg format or an \code{impac} object.}
+
 \item{...}{Further arguments passed on the \code{im}, if it is function.}
 }
 \value{
@@ -88,7 +94,7 @@ plot(
       color = matrix(grDevices::col2rgb(sample(grDevices::rainbow(100), 1), alpha = TRUE), nrow = 1)
     ),
     width = 400, height = 400,
-    max_images = 10, bg = "white",
+    max_images = 10, bg = "white"
   )$image
 )
 }

@@ -10,9 +10,9 @@ test_that("impac produces the same image", {
         color = matrix(grDevices::col2rgb(sample(grDevices::rainbow(100), 1), alpha = TRUE), nrow = 1)
       ),
       width = 400, height = 400,
-      max_images = 10, bg = "white",
+      max_images = 10, bg = "white"
     )$image,
-    path <- tempfile(fileext = ".png")
+    path <- withr::local_tempfile(fileext = ".png")
   )
 
   expect_snapshot_file(path, "circles.png")
@@ -32,7 +32,7 @@ test_that("adding metadata works", {
         ),
         color = ccol)},
       width = 400, height = 400,
-      max_images = 10, bg = "white",
+      max_images = 10, bg = "white"
     )
 
   expect_identical(colnames(x$meta), c("x", "y", "scale", "image", "color"))

@@ -35,6 +35,10 @@
 #' @param show_every Show the intermediate packed image after every
 #' `show_every` images are packed. Set to 0 to not show intermediates.
 #' @param progress Should progress be printed as the algorithm runs?
+#' @param start_image An optional image to start the packing with. If not
+#' `NULL`, the `width` and `height` arguments will be ignored and the
+#' dimensions of the starting image used instead. Can be an `imager::cimg`
+#' object, a path to an image in png or jpg format or an `impac` object.
 #' @param ... Further arguments passed on the `im`, if it is function.
 #'
 #' @return A packed image mosaic, as a [`imager::cimg`] object.
@@ -53,34 +57,54 @@
 #'       color = matrix(grDevices::col2rgb(sample(grDevices::rainbow(100), 1), alpha = TRUE), nrow = 1)
 #'     ),
 #'     width = 400, height = 400,
-#'     max_images = 10, bg = "white",
+#'     max_images = 10, bg = "white"
 #'   )$image
 #' )
 impac <- function(im, width = 1024, height = 800,
-                     mask = NULL,
-                     weights = NULL,
-                     preferred = NULL,
-                     max_num_tries = 100,
-                     scales = c(rep(0.5, 2), rep(0.25, 4), rep(0.15, 8)),
-                     scale_fun = function(s, i, c) {
-                       if(c < (i * 0.5)) {
-                          mscale <- min(s)
-                          c(s, rep(mscale / 2, floor(1 / mscale)))
-                       } else {
-                         scales
-                       }
-                     },
-                     max_images = 1000,
-                     min_scale = 0.05,
-                     bg = "transparent",
-                     show_every = 25,
-                     progress = TRUE,
-                     ...) {
+                  mask = NULL,
+                  weights = NULL,
+                  preferred = NULL,
+                  max_num_tries = 100,
+                  scales = c(rep(0.5, 2), rep(0.25, 4), rep(0.15, 8)),
+                  scale_fun = function(s, i, c) {
+                    if(c < (i * 0.5)) {
+                      mscale <- min(s)
+                      c(s, rep(mscale / 2, floor(1 / mscale)))
+                    } else {
+                      scales
+                    }
+                  },
+                  max_images = 1000,
+                  min_scale = 0.05,
+                  bg = "transparent",
+                  show_every = 25,
+                  progress = TRUE,
+                  start_image = NULL,
+                  ...) {
 
+
+  settings <- lapply(as.list(match.call()), function(x) evalq(x))
+  settings["start_image"] <- NULL
+
+  impac_env$latest_args <- settings[-1]
 
   bg_col <- as.vector(col2rgb(bg)) / 255
-  canvas <- imager::imfill(x = width, y = height,
-                           val = c(0, 0, 0, 0))
+  if(!is.null(start_image)) {
+    if(inherits(start_image, "character")) {
+      canvas <- convert_to_rgba(imager::load.image(start_image))
+    }
+    if(inherits(start_image, "cimg")) {
+      canvas <- convert_to_rgba(start_image)
+    }
+    if(inherits(start_image, "impac")) {
+      canvas <- convert_to_rgba(start_image$image)
+    }
+    width <- imager::width(canvas)
+    height <- imager::height(canvas)
+  } else {
+    canvas <- imager::imfill(x = width, y = height,
+                             val = c(0, 0, 0, 0))
+  }
 
   if(!is.null(mask)) {
 
@@ -145,7 +169,11 @@ impac <- function(im, width = 1024, height = 800,
     im <- sample(im, prob = weights)
   }
 
-  image_map <- data.frame(NULL)
+  if(!is.null(start_image) & inherits(start_image, "impac")) {
+    image_map <- start_image$meta
+  } else {
+    image_map <- data.frame(NULL)
+  }
   count <- 0
 
   if(progress) {
@@ -250,8 +278,8 @@ impac <- function(im, width = 1024, height = 800,
           }
         }
       }
-      im_env$saved_image <- canvas
-      im_env$meta <- image_map
+      impac_env$saved_image <- canvas
+      impac_env$meta <- image_map
     } else {
       scales <- scale_fun(scales, i, count)
     }
@@ -272,7 +300,8 @@ impac <- function(im, width = 1024, height = 800,
     pr$terminate()
   }
 
-  res <- list(image = canvas, meta = image_map)
+  res <- list(image = canvas, meta = image_map, args = settings[-1])
+  attr(res, "env") <- parent.frame()
   class(res) <- "impac"
 
   return(res)
