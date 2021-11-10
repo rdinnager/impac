@@ -153,17 +153,21 @@ Now we extract the artists who made the above images using the uid of image.
 
 ```{r get_artist}
 image_dat <- lapply(phylopics$meta$uuid, 
-                    function(x) {Sys.sleep(0.5); rphylopic::image_get(x, options = c("credit"))$credit})
+                    function(x) {Sys.sleep(2); rphylopic::image_get(x, options = c("credit"))$credit})
 ```
 
-```{r print_credit, echo=FALSE, comment="", results='asis'}
+```{r post_tweet, echo=FALSE, results='hide'}
+post_tweet <- Sys.getenv("POST_TWEET")==1
+```
+
+```{r print_credit, echo=FALSE, comment="", results='asis', eval=post_tweet}
 image_dat <- unlist(lapply(image_dat, function(x) ifelse(is.null(x), NA, x)))
 cat("## Artists whose work is showcased:\n")
 cat(paste(na.omit(unique(image_dat)), collapse = ", "))
 cat("\n\n## Detailed credit:\n")
 ```
 
-```{r tab, echo=FALSE}
+```{r tab, echo=FALSE, eval=post_tweet}
 knitr::kable(data.frame(num = seq_along(image_dat), 
                         x = phylopics$meta$x, 
                         y = phylopics$meta$y, 
@@ -171,7 +175,7 @@ knitr::kable(data.frame(num = seq_along(image_dat),
              col.names = c("", "Image X Coord", "Image Y Coord", "Credit"))
 ```
 
-```{r send_tweet, echo=FALSE, results='hide'}
+```{r send_tweet, echo=FALSE, results='hide', eval=post_tweet}
 auth <- rtweet::rtweet_bot(api_key = Sys.getenv("TWITTER_APP_KEY"),
                            api_secret = Sys.getenv("TWITTER_APP_SECRET"),
                            access_token = Sys.getenv("TWITTER_APP_TOKEN"),

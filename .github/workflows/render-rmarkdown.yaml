@@ -3,6 +3,7 @@
 on:
   schedule:
     - cron: '0 13 * * *'
+  push:
 
 name: render-rmarkdown
 
@@ -11,6 +12,7 @@ jobs:
     runs-on: windows-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      POST_TWEET: 1
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
