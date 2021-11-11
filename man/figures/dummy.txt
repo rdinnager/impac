@@ -1,0 +1,1 @@
+This is just a file to keep this folder around in case the images get deleted from git.
