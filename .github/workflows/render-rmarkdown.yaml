@@ -2,7 +2,7 @@
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
   schedule:
-    - cron: '0 13 * * *'
+    - cron: '0 13 */2 * *'
   push:
 
 name: render-rmarkdown
