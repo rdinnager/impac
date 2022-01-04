@@ -182,5 +182,6 @@ auth <- rtweet::rtweet_bot(api_key = Sys.getenv("TWITTER_APP_KEY"),
                            access_secret = Sys.getenv("TWITTER_APP_TOKEN_SECRET"))
 rtweet::auth_as(auth)
 rtweet::post_tweet("A packed image mosaic of @PhyloPic images generated with the {impac} package (https://github.com/rdinnager/impac). If you like this image please visit http://phylopic.org/ to check out more images and consider supporting them with a donation. Artists showcased: https://github.com/rdinnager/impac#artists-whose-work-is-showcased", 
-                   media = "man/figures/phylopic_a_pack.png")
+                   media = "man/figures/phylopic_a_pack.png",
+                   media_alt_text = "A packed image mosaic of PhyloPic images (animal and plant silhouettes) generated with the {impac} package")
 ```
