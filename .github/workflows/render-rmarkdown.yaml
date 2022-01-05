@@ -29,9 +29,10 @@ jobs:
           pacman -Sy --noconfirm mingw-w64-i686-glpk mingw-w64-i686-libxml2 mingw-w64-i686-gmp mingw-w64-x86_64-glpk mingw-w64-x86_64-libxml2 mingw-w64-x86_64-gmp
 
       - name: Setup Dependencies
-        uses: r-lib/actions/setup-r-dependencies@v1
+        uses: r-lib/actions/setup-r-dependencies@v2
         with:
           cache-version: 2
+          extra-packages: ropensci/rtweet
 
       - name: Render Rmarkdown files
         env:

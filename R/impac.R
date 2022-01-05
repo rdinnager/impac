@@ -202,6 +202,9 @@ impac <- function(im, width = 1024, height = 800,
       #img <- im(i)
     }
 
+    ## set all transparent pixels to have zero RGB values as well
+    img[imager::channel(img, 4) == 0] <- 0
+
     success <- FALSE
     for(j in seq_len(max_num_tries)) {
 
