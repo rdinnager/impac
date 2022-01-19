@@ -5,7 +5,7 @@ make_impac_func <- function(x) {
   y <- rlang::enquo(x)
   express <- rlang::quo_get_expr(y)
 
-  if(!inherits(express, "{")) {
+  if(rlang::is_call(express, name = "function")) {
     x <- rlang::eval_tidy(y)
   } else {
     x <- express

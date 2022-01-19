@@ -66,12 +66,12 @@ impac <- function(im, width = 1024, height = 800,
                   preferred = NULL,
                   max_num_tries = 100,
                   scales = c(rep(0.5, 2), rep(0.25, 4), rep(0.15, 8)),
-                  scale_fun = function(s, i, c) {
-                    if(c < (i * 0.5)) {
-                      mscale <- min(s)
-                      c(s, rep(mscale / 2, floor(1 / mscale)))
+                  scaler = {
+                    if(.np < (.i * 0.5)) {
+                      mscale <- min(.s)
+                      c(.s, rep(mscale / 2, floor(1 / mscale)))
                     } else {
-                      scales
+                      .s
                     }
                   },
                   max_images = 1000,
@@ -80,6 +80,7 @@ impac <- function(im, width = 1024, height = 800,
                   show_every = 25,
                   progress = TRUE,
                   start_image = NULL,
+                  modifier = NULL,
                   ...) {
 
 
@@ -104,6 +105,12 @@ impac <- function(im, width = 1024, height = 800,
   } else {
     canvas <- imager::imfill(x = width, y = height,
                              val = c(0, 0, 0, 0))
+  }
+
+  ## functions
+  scale_fun <- make_impac_func({{ scaler }})
+  if(!is.null(modifier)) {
+    modify_fun <- make_impac_func({{ modifier }})
   }
 
   if(!is.null(mask)) {
@@ -284,7 +291,11 @@ impac <- function(im, width = 1024, height = 800,
       impac_env$saved_image <- canvas
       impac_env$meta <- image_map
     } else {
-      scales <- scale_fun(scales, i, count)
+      scales <- scale_fun(.x = x, .y = y,
+                          .i = i, .s = scales,
+                          .meta = image_map,
+                          .img = canvas,
+                          .np = count)
     }
 
     mscale = min(scales)
