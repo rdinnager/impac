@@ -261,6 +261,15 @@ impac <- function(im, width = 1024, height = 800,
         next
       }
 
+      ## modify image if specified
+      if(!is.null(modifier)) {
+        resized_img <- modify_fun(.x = x, .y = y,
+                                  .i = i, .s = scales,
+                                  .meta = image_map,
+                                  .img = resized_img,
+                                  .np = count,
+                                  .c = canvas)
+      }
       ## paste image into canvas
       new_img <- imager::add(list(canvas[xr[1]:xr[2], yr[1]:yr[2], , , drop = FALSE], resized_img))
       canvas[xr[1]:xr[2], yr[1]:yr[2], , ] <- new_img
@@ -294,8 +303,9 @@ impac <- function(im, width = 1024, height = 800,
       scales <- scale_fun(.x = x, .y = y,
                           .i = i, .s = scales,
                           .meta = image_map,
-                          .img = canvas,
-                          .np = count)
+                          .img = resized_img,
+                          .np = count,
+                          .c = canvas)
     }
 
     mscale = min(scales)

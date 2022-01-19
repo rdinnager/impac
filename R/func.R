@@ -18,6 +18,7 @@ make_impac_func <- function(x) {
                                .meta = ,
                                .img = ,
                                .np = ,
+                               .c = ,
                                ... = )
 
   if(rlang::is_expression(x)) {
