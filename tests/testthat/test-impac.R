@@ -54,7 +54,7 @@ test_that("different ways of specifying scaler work", {
       width = 400, height = 400,
       max_images = 10, bg = "white",
       scaler = function() {
-                    if(.np < (.i * 0.5)) {
+                    if(!.success & .try == 1 & .np < (.i * 0.5)) {
                       mscale <- min(.s)
                       c(.s, rep(mscale / 2, floor(1 / mscale)))
                     } else {
@@ -79,7 +79,7 @@ test_that("different ways of specifying scaler work", {
       width = 400, height = 400,
       max_images = 10, bg = "white",
       scaler = function() {
-                    if(.np < (.i * 0.5)) {
+                    if(!.success & .try == 1 & .np < (.i * 0.5)) {
                       mscale <- min(.s)
                       c(.s, rep(mscale / 2, floor(1 / mscale)))
                     } else {
@@ -103,7 +103,7 @@ test_that("different ways of specifying scaler work", {
       ),
       width = 400, height = 400,
       max_images = 10, bg = "white",
-      scaler = c(.s, .s * 0.5)
+      scaler = if(!.success & .try == 1) c(.s, .s * 0.5) else .s
     )$image,
     path <- withr::local_tempfile(fileext = ".png")
   )

@@ -23,14 +23,15 @@
 #' onto the canvas before giving up.
 #' @param scales A vector of starting scaling factors to randomly choose
 #' from for each image.
-#' @param scale_fun An function that takes three arguments,
-#' which correspond to the current vector of scaling factors, the current
-#' iteration of the algorithm, and the count of the number of packed images
-#' so far, respectively (e.g. `f(s, i, c)`), and returns a new vector of
-#' scaling factors to use.
+#' @param scaler A function or expression (function-like), which returns
+#' a new vector of scaling factors to use. If the vector has length 1, then
+#' it is assumed to be the scaling factor for the current iteration, if longer,
+#' a scaling factor will be randomly sampled from the vector for the current
+#' iteration.
 #' @param max_images The maximum number of images to pack before stopping.
 #' @param min_scale The minimum scale factor to use. If the algorithm
-#' generates a scale factor this small (via `scale_fun`), packing will stop.
+#' generates a scale factor this small (via `scaler`), packing will stop.
+#' ignored if `terminater` is not `NULL`.
 #' @param bg The background colour for the campus, default: "transparent"
 #' @param show_every Show the intermediate packed image after every
 #' `show_every` images are packed. Set to 0 to not show intermediates.
@@ -67,7 +68,7 @@ impac <- function(im, width = 1024, height = 800,
                   max_num_tries = 100,
                   scales = c(rep(0.5, 2), rep(0.25, 4), rep(0.15, 8)),
                   scaler = {
-                    if(.np < (.i * 0.5)) {
+                    if(!.success & .try == 1 & .np < (.i * 0.5)) {
                       mscale <- min(.s)
                       c(.s, rep(mscale / 2, floor(1 / mscale)))
                     } else {
@@ -81,6 +82,7 @@ impac <- function(im, width = 1024, height = 800,
                   progress = TRUE,
                   start_image = NULL,
                   modifier = NULL,
+                  terminater = NULL,
                   ...) {
 
 
@@ -111,6 +113,9 @@ impac <- function(im, width = 1024, height = 800,
   scale_fun <- make_impac_func({{ scaler }})
   if(!is.null(modifier)) {
     modify_fun <- make_impac_func({{ modifier }})
+  }
+  if(!is.null(terminater)) {
+    terminate_fun <- make_impac_func({{ modifier }})
   }
 
   if(!is.null(mask)) {
@@ -182,6 +187,8 @@ impac <- function(im, width = 1024, height = 800,
     image_map <- data.frame(NULL)
   }
   count <- 0
+  last_success <- TRUE
+  terminate <- FALSE
 
   if(progress) {
     total <- ifelse(im_type == "function", "?", as.character(num_images))
@@ -217,6 +224,17 @@ impac <- function(im, width = 1024, height = 800,
 
       x <- runif(1, 0, width)
       y <- runif(1, 0, height)
+
+      scales <- scale_fun(.x = x, .y = y,
+                          .i = i, .s = scales,
+                          .w = 0, .h = 0,
+                          .bb = c(0, 0, 0, 0),
+                          .meta = image_map,
+                          .img = resized_img,
+                          .np = count,
+                          .c = canvas,
+                          .success = last_success,
+                          .try = j)
       scale <- sample(scales, 1)
 
       if(i <= num_preferred) {
@@ -265,11 +283,15 @@ impac <- function(im, width = 1024, height = 800,
       if(!is.null(modifier)) {
         resized_img <- modify_fun(.x = x, .y = y,
                                   .i = i, .s = scales,
+                                  .w = w, .h = h,
+                                  .bb = c(xr, yr),
                                   .meta = image_map,
                                   .img = resized_img,
                                   .np = count,
-                                  .c = canvas)
+                                  .c = canvas,
+                                  .success = last_success)
       }
+      resized_img[imager::channel(resized_img, 4) == 0] <- 0
       ## paste image into canvas
       new_img <- imager::add(list(canvas[xr[1]:xr[2], yr[1]:yr[2], , , drop = FALSE], resized_img))
       canvas[xr[1]:xr[2], yr[1]:yr[2], , ] <- new_img
@@ -299,19 +321,29 @@ impac <- function(im, width = 1024, height = 800,
       }
       impac_env$saved_image <- canvas
       impac_env$meta <- image_map
+      last_success <- TRUE
     } else {
-      scales <- scale_fun(.x = x, .y = y,
-                          .i = i, .s = scales,
-                          .meta = image_map,
-                          .img = resized_img,
-                          .np = count,
-                          .c = canvas)
+      last_success <- FALSE
     }
 
-    mscale = min(scales)
-    if(mscale < min_scale) {
-      message("Packing stopped since not enough empty space is left.")
-      break;
+    if(is.null(terminater)) {
+      mscale = min(scales)
+      if(mscale < min_scale) {
+        message("Packing stopped since not enough empty space is left.")
+        terminate <- TRUE
+      }
+    } else {
+      terminate <- terminate_fun(.x = x, .y = y,
+                                  .i = i, .s = scales,
+                                  .meta = image_map,
+                                  .img = resized_img,
+                                  .np = count,
+                                  .c = canvas,
+                                  .success = last_success)
+    }
+
+    if(terminate) {
+      break
     }
 
   }

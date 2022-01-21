@@ -15,10 +15,15 @@ make_impac_func <- function(x) {
                                .y = ,
                                .i = ,
                                .s = ,
+                               .w = ,
+                               .h = ,
+                               .bb = ,
                                .meta = ,
                                .img = ,
                                .np = ,
                                .c = ,
+                               .success = ,
+                               .try = ,
                                ... = )
 
   if(rlang::is_expression(x)) {
