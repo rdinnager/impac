@@ -10,7 +10,8 @@ test_that("impac produces the same image", {
         color = matrix(grDevices::col2rgb(sample(grDevices::rainbow(100), 1), alpha = TRUE), nrow = 1)
       ),
       width = 400, height = 400,
-      max_images = 10, bg = "white"
+      max_images = 10, bg = "white",
+      min_scale = 0.01
     )$image,
     path <- withr::local_tempfile(fileext = ".png")
   )
@@ -32,7 +33,8 @@ test_that("adding metadata works", {
         ),
         color = ccol)},
       width = 400, height = 400,
-      max_images = 10, bg = "white"
+      max_images = 10, bg = "white",
+      min_scale = 0.01,
     )
 
   expect_identical(colnames(x$meta), c("x", "y", "scale", "image", "color"))
@@ -53,6 +55,7 @@ test_that("different ways of specifying scaler work", {
       ),
       width = 400, height = 400,
       max_images = 10, bg = "white",
+      min_scale = 0.01,
       scaler = function() {
                     if(!.success & .try == 1 & .np < (.i * 0.5)) {
                       mscale <- min(.s)
@@ -78,6 +81,7 @@ test_that("different ways of specifying scaler work", {
       ),
       width = 400, height = 400,
       max_images = 10, bg = "white",
+      min_scale = 0.01,
       scaler = function() {
                     if(!.success & .try == 1 & .np < (.i * 0.5)) {
                       mscale <- min(.s)
@@ -103,6 +107,7 @@ test_that("different ways of specifying scaler work", {
       ),
       width = 400, height = 400,
       max_images = 10, bg = "white",
+      min_scale = 0.01,
       scaler = if(!.success & .try == 1) c(.s, .s * 0.5) else .s
     )$image,
     path <- withr::local_tempfile(fileext = ".png")

@@ -13,14 +13,18 @@ impac(
   preferred = NULL,
   max_num_tries = 100,
   scales = c(rep(0.5, 2), rep(0.25, 4), rep(0.15, 8)),
-  scale_fun = function(s, i, c) {     if (c < (i * 0.5)) {         mscale <- min(s)    
-        c(s, rep(mscale/2, floor(1/mscale)))     }     else {         scales     } },
+  scaler = {     if (!.success & .try == 1 & .np < (.i * 0.5)) {         mscale <-
+    min(.s)         c(.s, rep(mscale/2, floor(1/mscale)))     }     else {         .s    
+    } },
   max_images = 1000,
   min_scale = 0.05,
   bg = "transparent",
   show_every = 25,
   progress = TRUE,
   start_image = NULL,
+  xychooser = NULL,
+  modifier = NULL,
+  terminater = NULL,
   ...
 )
 }
@@ -52,16 +56,17 @@ onto the canvas before giving up.}
 \item{scales}{A vector of starting scaling factors to randomly choose
 from for each image.}
 
-\item{scale_fun}{An function that takes three arguments,
-which correspond to the current vector of scaling factors, the current
-iteration of the algorithm, and the count of the number of packed images
-so far, respectively (e.g. \code{f(s, i, c)}), and returns a new vector of
-scaling factors to use.}
+\item{scaler}{A function or expression (function-like), which returns
+a new vector of scaling factors to use. If the vector has length 1, then
+it is assumed to be the scaling factor for the current iteration, if longer,
+a scaling factor will be randomly sampled from the vector for the current
+iteration.}
 
 \item{max_images}{The maximum number of images to pack before stopping.}
 
 \item{min_scale}{The minimum scale factor to use. If the algorithm
-generates a scale factor this small (via \code{scale_fun}), packing will stop.}
+generates a scale factor this small (via \code{scaler}), packing will stop.
+ignored if \code{terminater} is not \code{NULL}.}
 
 \item{bg}{The background colour for the campus, default: "transparent"}
 

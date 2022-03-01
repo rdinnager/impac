@@ -6,8 +6,7 @@
 \alias{_PACKAGE}
 \title{impac: Make packed image mosaics}
 \description{
-impac takes a list of images or a function that generates images and 
-    packs them onto a canvas using a greedy algorithm, while respecting transparency.
+impac takes a list of images or a function that generates images and packs them onto a canvas using a greedy algorithm, while respecting transparency.
 }
 \author{
 \strong{Maintainer}: Russell Dinnage \email{r.dinnage@gmail.com} (\href{https://orcid.org/0000-0003-0846-2819}{ORCID}) [copyright holder]

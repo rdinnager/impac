@@ -8,4 +8,9 @@
 ## usethis namespace: end
 NULL
 
-impac_env <- new.env()
+impac_exec_env <- new.env()
+
+.onLoad <- function(libname, pkgname) {
+  impac_exec_env$run_impac <- .run_impac
+  impac_exec_env$space_left <- .space_left
+}

@@ -56,8 +56,10 @@ impac_resume <- function(x = NULL,
 #'
 #' @examples
 impac_recover <- function() {
-  if(!is.null(impac_env$saved_image)) {
-    saved <- list(image = impac_env$saved_image, meta = impac_env$meta, args = impac_env$latest_args)
+  if(!is.null(impac_exec_env$`.canvas`)) {
+    saved <- list(image = impac_exec_env$`.canvas`,
+              meta = impac_exec_env$`.meta`,
+              args = impac_exec_env$settings[-1])
   } else {
     stop("Sorry, there is no packed image canvas currently cached.")
   }
@@ -73,7 +75,7 @@ impac_recover <- function() {
 #' @examples
 #' impac_clear_cache()
 impac_clear_cache <- function() {
-  impac_env$saved_image <- NULL
-  impac_env$meta <- NULL
-  impac_env$latest_args <- NULL
+
+  rm(list = ls(impac_exec_env, all.names = TRUE), pos = impac_exec_env)
+
 }

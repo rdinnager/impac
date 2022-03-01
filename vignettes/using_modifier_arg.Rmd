@@ -125,5 +125,8 @@ Run `impac`:
 logo <- impac(generate_platonic, progress = TRUE, show_every = 10, 
               modifier = make_gray, width = 1024, height = 1024,
               bg = "white",
-              min_scale = 0.001)
+              min_scale = 0.001,
+              terminater = {
+                space_left() < 0.1
+              })
 ```
