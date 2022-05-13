@@ -166,597 +166,630 @@ image_dat <- lapply(phylopics$meta$uuid,
 
 ## Artists whose work is showcased:
 
-Margot Michaud, Tony Ayling (vectorized by T. Michael Keesey), Jaime
-Headden, T. Michael Keesey, Jake Warner, Mathew Wedel, Andy Wilson,
-Mattia Menchetti, Erika Schumacher, Robert Hering, Juan Carlos Jerí,
-Pete Buchholz, Zimices, Kanako Bessho-Uehara, Matt Crook, Felix Vaux,
-Darren Naish (vectorize by T. Michael Keesey), Markus A. Grohme, Emily
-Willoughby, Rebecca Groom, Jagged Fang Designs, Steven Traver, Dmitry
-Bogdanov (vectorized by T. Michael Keesey), Nobu Tamura (vectorized by
-T. Michael Keesey), Jack Mayer Wood, Almandine (vectorized by T. Michael
-Keesey), Katie S. Collins, FJDegrange, Chris huh, Ingo Braasch,
-Christoph Schomburg, Michelle Site, Josefine Bohr Brask, Caleb M. Brown,
-Myriam\_Ramirez, Rene Martin, Nobu Tamura, vectorized by Zimices,
-Gabriela Palomo-Munoz, Michael Ströck (vectorized by T. Michael Keesey),
-Kamil S. Jaron, Ignacio Contreras, Scott Hartman, Steven Coombs, Tony
-Ayling, Javiera Constanzo, Tasman Dixon, White Wolf, Falconaumanni and
-T. Michael Keesey, Gareth Monger, Conty (vectorized by T. Michael
-Keesey), Verisimilus, Dexter R. Mardis, Xavier A. Jenkins, Gabriel
-Ugueto, Stanton F. Fink, vectorized by Zimices, Birgit Lang, Robbie N.
-Cada (modified by T. Michael Keesey), Anthony Caravaggi, C. Camilo
-Julián-Caballero, Sergio A. Muñoz-Gómez, Michael P. Taylor, Sharon
-Wegner-Larsen, Allison Pease, Ghedoghedo (vectorized by T. Michael
-Keesey), Michael Scroggie, David Tana, Diego Fontaneto, Elisabeth A.
-Herniou, Chiara Boschetti, Manuela Caprioli, Giulio Melone, Claudia
-Ricci, and Timothy G. Barraclough (vectorized by T. Michael Keesey),
-SecretJellyMan, Iain Reid, Robbie N. Cada (vectorized by T. Michael
-Keesey), T. Michael Keesey (after Tillyard), Cesar Julian, Noah
-Schlottman, photo by Museum of Geology, University of Tartu, Ferran
-Sayol, Robert Bruce Horsfall (vectorized by T. Michael Keesey), Yan Wong
-(vectorization) from 1873 illustration, Matt Martyniuk, Marie Russell,
-Matt Martyniuk (modified by T. Michael Keesey), Adam Stuart Smith
-(vectorized by T. Michael Keesey), Aviceda (photo) & T. Michael Keesey,
-Sam Droege (photo) and T. Michael Keesey (vectorization), Mariana Ruiz
-Villarreal (modified by T. Michael Keesey), Lukasiniho, T. Michael
-Keesey (after Mauricio Antón), CNZdenek, Jaime A. Headden (vectorized by
-T. Michael Keesey), M Kolmann, Jessica Anne Miller, Paul Baker (photo),
-John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G.
-Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey, Jaime
-Headden (vectorized by T. Michael Keesey), Skye McDavid, Maija Karala,
-Arthur S. Brum, Alexandre Vong, Catherine Yasuda, Tyler Greenfield,
-Jiekun He, Renato Santos, Kanchi Nanjo, Andrew R. Gehrke, Jaime Headden,
-modified by T. Michael Keesey, Alyssa Bell & Luis Chiappe 2015,
-dx.doi.org/10.1371/journal.pone.0141690, Dave Souza (vectorized by T.
-Michael Keesey), Beth Reinke, Manabu Sakamoto, Martin Kevil, Sean
-McCann, Yan Wong from photo by Gyik Toma, Darren Naish (vectorized by T.
-Michael Keesey), Armin Reindl, Tauana J. Cunha, Unknown (photo), John E.
-McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford,
-Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey, G. M. Woodward,
-Carlos Cano-Barbacil, T. Michael Keesey (vectorization) and Nadiatalent
-(photography), T. Michael Keesey (after MPF), Matthias Buschmann
-(vectorized by T. Michael Keesey), Kent Elson Sorgon, Crystal Maier,
-Haplochromis (vectorized by T. Michael Keesey), M. A. Broussard, Matt
-Wilkins, Tyler Greenfield and Dean Schnabel, Sarah Alewijnse, Heinrich
-Harder (vectorized by William Gearty), Neil Kelley, L. Shyamal,
-S.Martini, Christine Axon, FunkMonk, Collin Gross, Nobu Tamura, Kai R.
-Caspar, Kailah Thorn & Mark Hutchinson, Greg Schechter (original photo),
-Renato Santos (vector silhouette), Noah Schlottman, Becky Barnes,
-Liftarn, Lafage, Mark Hofstetter (vectorized by T. Michael Keesey),
-Peileppe, Mathieu Pélissié, Smokeybjb (vectorized by T. Michael Keesey),
-Alex Slavenko, Estelle Bourdon, Andrew A. Farke, Gopal Murali, Jon Hill,
-T. Michael Keesey (vectorization); Thorsten Assmann, Jörn Buse, Claudia
-Drees, Ariel-Leib-Leonid Friedman, Tal Levanony, Andrea Matern, Anika
-Timm, and David W. Wrase (photography), Kimberly Haddrell, Matthew Hooge
-(vectorized by T. Michael Keesey), Scott Reid, Isaure Scavezzoni, Dean
-Schnabel, Cagri Cevrim, Filip em, John Conway, Xavier Giroux-Bougard,
-Kailah Thorn & Ben King, Alan Manson (photo), John E. McCormack, Michael
-G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn,
-Robb T. Brumfield & T. Michael Keesey, Martin R. Smith, Walter Vladimir,
-Maxwell Lefroy (vectorized by T. Michael Keesey), Mathilde Cordellier,
-Tyler Greenfield and Scott Hartman, Chris A. Hamilton, Scott Hartman
-(modified by T. Michael Keesey), Martin R. Smith, from photo by Jürgen
-Schoner, Mali’o Kodis, photograph by G. Giribet, Siobhon Egan, Joanna
-Wolfe, Nobu Tamura (modified by T. Michael Keesey), ДиБгд (vectorized by
-T. Michael Keesey), Nobu Tamura, modified by Andrew A. Farke, Alexander
-Schmidt-Lebuhn, Smokeybjb, Apokryltaros (vectorized by T. Michael
-Keesey), Vijay Cavale (photo), John E. McCormack, Michael G. Harvey,
-Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T.
-Brumfield & T. Michael Keesey, Geoff Shaw, Ewald Rübsamen, Farelli
-(photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth,
-Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael
-Keesey, Mercedes Yrayzoz (vectorized by T. Michael Keesey)
+Gabriela Palomo-Munoz, Ignacio Contreras, B. Duygu Özpolat, Matt Crook,
+Steven Traver, Chloé Schmidt, Ferran Sayol, Scott Hartman, Erika
+Schumacher, Nobu Tamura (vectorized by T. Michael Keesey), Margot
+Michaud, Michael P. Taylor, Tasman Dixon, Gopal Murali, Andrew A. Farke,
+Collin Gross, Mark Hannaford (photo), John E. McCormack, Michael G.
+Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb
+T. Brumfield & T. Michael Keesey, T. Michael Keesey (vector) and Stuart
+Halliday (photograph), Sam Fraser-Smith (vectorized by T. Michael
+Keesey), Shyamal, Smokeybjb (modified by Mike Keesey), Jan A. Venter,
+Herbert H. T. Prins, David A. Balfour & Rob Slotow (vectorized by T.
+Michael Keesey), FunkMonk, Milton Tan, Kamil S. Jaron, Thea Boodhoo
+(photograph) and T. Michael Keesey (vectorization), Katie S. Collins,
+Smokeybjb, vectorized by Zimices, Chris huh, T. Michael Keesey, Markus
+A. Grohme, Matt Celeskey, Zimices, Jose Carlos Arenas-Monroy, Emily
+Willoughby, Gareth Monger, Noah Schlottman, photo by Casey Dunn, C.
+Camilo Julián-Caballero, Noah Schlottman, photo from Casey Dunn, Emily
+Jane McTavish, from Haeckel, E. H. P. A. (1904).Kunstformen der Natur.
+Bibliographisches, White Wolf, Maxime Dahirel, Sarah Alewijnse, Espen
+Horn (model; vectorized by T. Michael Keesey from a photo by H. Zell),
+Christoph Schomburg, Yan Wong from illustration by Jules Richard (1907),
+Michelle Site, Apokryltaros (vectorized by T. Michael Keesey),
+Ghedoghedo (vectorized by T. Michael Keesey), Kai R. Caspar, Nobu
+Tamura, Tess Linden, Sean McCann, Cesar Julian, Mathew Wedel, Martin
+Kevil, Dexter R. Mardis, Thibaut Brunet, Beth Reinke, David Orr,
+Lankester Edwin Ray (vectorized by T. Michael Keesey), Scott Hartman
+(vectorized by William Gearty), Maija Karala, Birgit Lang, Konsta
+Happonen, from a CC-BY-NC image by pelhonen on iNaturalist, Yan Wong,
+Ghedo (vectorized by T. Michael Keesey), Tauana J. Cunha, Mason McNair,
+Scott Reid, Roberto Díaz Sibaja, Jagged Fang Designs, Ray Simpson
+(vectorized by T. Michael Keesey), Verdilak, Jaime Headden, T. Michael
+Keesey (vectorization) and Tony Hisgett (photography), Pearson Scott
+Foresman (vectorized by T. Michael Keesey), Yan Wong from wikipedia
+drawing (PD: Pearson Scott Foresman), Rachel Shoop, Caleb M. Brown, Matt
+Dempsey, Smith609 and T. Michael Keesey, Yan Wong from photo by Denes
+Emoke, Andy Wilson, Mercedes Yrayzoz (vectorized by T. Michael Keesey),
+Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael
+Keesey., Noah Schlottman, photo by Reinhard Jahn, Andrew R. Gehrke,
+Meliponicultor Itaymbere, Scarlet23 (vectorized by T. Michael Keesey),
+T. Michael Keesey (photo by Bc999 \[Black crow\]), Nobu Tamura,
+vectorized by Zimices, Chuanixn Yu, Rebecca Groom, Sharon Wegner-Larsen,
+Emma Hughes, Juan Carlos Jerí, M. Antonio Todaro, Tobias Kånneby, Matteo
+Dal Zotto, and Ulf Jondelius (vectorized by T. Michael Keesey), T.
+Tischler, Armin Reindl, Ingo Braasch, Catherine Yasuda, Brockhaus and
+Efron, DW Bapst (modified from Bulman, 1970), Patrick Fisher (vectorized
+by T. Michael Keesey), Gustav Mützel, Manabu Sakamoto, Crystal Maier,
+Acrocynus (vectorized by T. Michael Keesey), Xavier Giroux-Bougard,
+Dmitry Bogdanov, Gordon E. Robertson, Alexander Schmidt-Lebuhn,
+Smokeybjb, Dmitry Bogdanov (vectorized by T. Michael Keesey), S.Martini,
+Maxwell Lefroy (vectorized by T. Michael Keesey), Jay Matternes,
+vectorized by Zimices, Kanchi Nanjo, Walter Vladimir, Lily Hughes,
+Francisco Gascó (modified by Michael P. Taylor), Aline M. Ghilardi,
+Christina N. Hodson, Jessica Rick, Danny Cicchetti (vectorized by T.
+Michael Keesey), Kristina Gagalova, 于川云, Roberto Diaz Sibaja, based on
+Domser, SauropodomorphMonarch, CNZdenek, Zsoldos Márton (vectorized by
+T. Michael Keesey), Abraão B. Leite, Geoff Shaw, Pranav Iyer (grey
+ideas), Steven Coombs, Jiekun He, Sebastian Stabinger, Robert Gay, Chris
+Jennings (Risiatto), Anthony Caravaggi, Mette Aumala, Carlos
+Cano-Barbacil, Lafage, Noah Schlottman, photo by Martin V. Sørensen,
+Skye McDavid, Luc Viatour (source photo) and Andreas Plank, Original
+drawing by Antonov, vectorized by Roberto Díaz Sibaja, Mark Hofstetter
+(vectorized by T. Michael Keesey), Harold N Eyster, David Tana, Chase
+Brownstein, Amanda Katzer, Zachary Quigley, Robert Bruce Horsfall,
+vectorized by Zimices, NOAA Great Lakes Environmental Research
+Laboratory (illustration) and Timothy J. Bartley (silhouette), Manabu
+Bessho-Uehara, Xavier A. Jenkins, Gabriel Ugueto, Julio Garza, Samanta
+Orellana, Michael Scroggie, from original photograph by Gary M. Stolz,
+USFWS (original photograph in public domain)., Jaime A. Headden
+(vectorized by T. Michael Keesey), terngirl, Maxime Dahirel
+(digitisation), Kees van Achterberg et al (doi:
+10.3897/BDJ.8.e49017)(original publication), Julia B McHugh, Auckland
+Museum and T. Michael Keesey, FunkMonk (Michael B. H.), Sarah Werning,
+Andrés Sánchez, Mario Quevedo, Emily Jane McTavish, Nobu Tamura
+(vectorized by A. Verrière), Abraão Leite, Joanna Wolfe, Kelly, Young
+and Zhao (1972:figure 4), modified by Michael P. Taylor, M Hutchinson,
+Trond R. Oskars, T. Michael Keesey (after A. Y. Ivantsov), Iain Reid, DW
+Bapst (Modified from Bulman, 1964), Michael “FunkMonk” B. H. (vectorized
+by T. Michael Keesey), Вальдимар (vectorized by T. Michael Keesey), Alex
+Slavenko, Renata F. Martins, Matthew Hooge (vectorized by T. Michael
+Keesey), Ghedo and T. Michael Keesey, Michele M Tobias, Jaime Headden,
+modified by T. Michael Keesey, Jon Hill, Michael Scroggie
 
 ## Detailed credit:
 
-|     | Image X Coord | Image Y Coord | Credit                                                                                                                                                                               |
-| --: | ------------: | ------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   1 |     462.05475 |    575.057438 | Margot Michaud                                                                                                                                                                       |
-|   2 |     286.99798 |    683.254029 | Tony Ayling (vectorized by T. Michael Keesey)                                                                                                                                        |
-|   3 |     124.28331 |    352.208167 | Jaime Headden                                                                                                                                                                        |
-|   4 |     913.32558 |    316.017844 | T. Michael Keesey                                                                                                                                                                    |
-|   5 |      72.74463 |    153.833451 | Jake Warner                                                                                                                                                                          |
-|   6 |     928.70693 |    679.708609 | Mathew Wedel                                                                                                                                                                         |
-|   7 |     492.64875 |    306.475699 | T. Michael Keesey                                                                                                                                                                    |
-|   8 |     690.80049 |    282.767488 | Andy Wilson                                                                                                                                                                          |
-|   9 |     876.33601 |    110.890401 | Mattia Menchetti                                                                                                                                                                     |
-|  10 |     443.22062 |    747.821050 | Erika Schumacher                                                                                                                                                                     |
-|  11 |     828.58590 |    463.137633 | Margot Michaud                                                                                                                                                                       |
-|  12 |     798.98540 |    238.048957 | Robert Hering                                                                                                                                                                        |
-|  13 |     639.10000 |    113.737794 | Margot Michaud                                                                                                                                                                       |
-|  14 |     807.98992 |    716.330611 | Juan Carlos Jerí                                                                                                                                                                     |
-|  15 |     231.08247 |    510.086482 | Pete Buchholz                                                                                                                                                                        |
-|  16 |     250.60431 |    445.269638 | Zimices                                                                                                                                                                              |
-|  17 |     563.51264 |    657.117596 | Kanako Bessho-Uehara                                                                                                                                                                 |
-|  18 |     203.05978 |    230.101117 | Margot Michaud                                                                                                                                                                       |
-|  19 |      70.57565 |    592.633517 | Zimices                                                                                                                                                                              |
-|  20 |     272.53524 |    307.662795 | Matt Crook                                                                                                                                                                           |
-|  21 |     689.73971 |    584.976007 | Felix Vaux                                                                                                                                                                           |
-|  22 |      67.14227 |    263.146358 | Darren Naish (vectorize by T. Michael Keesey)                                                                                                                                        |
-|  23 |     316.83325 |     68.712606 | Markus A. Grohme                                                                                                                                                                     |
-|  24 |     117.40191 |    473.616087 | Zimices                                                                                                                                                                              |
-|  25 |     435.53394 |     29.769731 | Emily Willoughby                                                                                                                                                                     |
-|  26 |     229.67323 |    155.276673 | Rebecca Groom                                                                                                                                                                        |
-|  27 |     807.65307 |    614.753348 | Matt Crook                                                                                                                                                                           |
-|  28 |     171.15474 |    749.651038 | Jagged Fang Designs                                                                                                                                                                  |
-|  29 |     176.45030 |     47.097578 | Steven Traver                                                                                                                                                                        |
-|  30 |     565.11552 |    441.568238 | Andy Wilson                                                                                                                                                                          |
-|  31 |     162.37186 |    562.352149 | Dmitry Bogdanov (vectorized by T. Michael Keesey)                                                                                                                                    |
-|  32 |     670.88098 |    495.760879 | T. Michael Keesey                                                                                                                                                                    |
-|  33 |     924.38068 |    541.487729 | Dmitry Bogdanov (vectorized by T. Michael Keesey)                                                                                                                                    |
-|  34 |     922.47014 |    448.492166 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-|  35 |     955.30260 |    641.652898 | Jack Mayer Wood                                                                                                                                                                      |
-|  36 |      66.86667 |    677.083738 | Almandine (vectorized by T. Michael Keesey)                                                                                                                                          |
-|  37 |     520.16631 |    124.784146 | Katie S. Collins                                                                                                                                                                     |
-|  38 |     327.69989 |    567.097725 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-|  39 |     802.40016 |    378.870856 | FJDegrange                                                                                                                                                                           |
-|  40 |     414.35370 |     92.471286 | Chris huh                                                                                                                                                                            |
-|  41 |     675.04677 |    768.433011 | Zimices                                                                                                                                                                              |
-|  42 |     330.87853 |    737.789222 | Matt Crook                                                                                                                                                                           |
-|  43 |     483.89501 |    518.019269 | Ingo Braasch                                                                                                                                                                         |
-|  44 |      16.50090 |    464.355678 | T. Michael Keesey                                                                                                                                                                    |
-|  45 |     951.71642 |    749.511079 | Margot Michaud                                                                                                                                                                       |
-|  46 |     400.75747 |    630.010829 | Christoph Schomburg                                                                                                                                                                  |
-|  47 |     980.20277 |    271.678988 | Michelle Site                                                                                                                                                                        |
-|  48 |     584.54629 |    182.125648 | Josefine Bohr Brask                                                                                                                                                                  |
-|  49 |     866.24826 |    200.584092 | T. Michael Keesey                                                                                                                                                                    |
-|  50 |     137.40299 |    417.784978 | Caleb M. Brown                                                                                                                                                                       |
-|  51 |     250.66700 |    203.904892 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-|  52 |     748.09613 |    134.482901 | Myriam\_Ramirez                                                                                                                                                                      |
-|  53 |     639.70520 |     45.665315 | Rene Martin                                                                                                                                                                          |
-|  54 |     714.61574 |     18.217799 | Nobu Tamura, vectorized by Zimices                                                                                                                                                   |
-|  55 |     700.95989 |    681.410489 | Gabriela Palomo-Munoz                                                                                                                                                                |
-|  56 |     205.80938 |    704.396636 | Michael Ströck (vectorized by T. Michael Keesey)                                                                                                                                     |
-|  57 |     543.73339 |    768.626842 | Kamil S. Jaron                                                                                                                                                                       |
-|  58 |     191.47188 |    642.064941 | Ignacio Contreras                                                                                                                                                                    |
-|  59 |     853.58108 |    521.315099 | Scott Hartman                                                                                                                                                                        |
-|  60 |     746.53259 |    407.267763 | Markus A. Grohme                                                                                                                                                                     |
-|  61 |     504.46862 |     65.890651 | Steven Coombs                                                                                                                                                                        |
-|  62 |     770.06858 |    556.480720 | Tony Ayling                                                                                                                                                                          |
-|  63 |     561.39470 |    514.486506 | T. Michael Keesey                                                                                                                                                                    |
-|  64 |     888.24049 |    602.214583 | Felix Vaux                                                                                                                                                                           |
-|  65 |     687.44978 |    427.284871 | Javiera Constanzo                                                                                                                                                                    |
-|  66 |     193.09978 |    289.415294 | Zimices                                                                                                                                                                              |
-|  67 |      64.87598 |    398.761712 | Tasman Dixon                                                                                                                                                                         |
-|  68 |     377.19055 |    522.362431 | White Wolf                                                                                                                                                                           |
-|  69 |     543.26864 |     35.184732 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-|  70 |      96.78351 |    731.131037 | Falconaumanni and T. Michael Keesey                                                                                                                                                  |
-|  71 |     573.39784 |    237.106876 | Zimices                                                                                                                                                                              |
-|  72 |     307.03291 |     30.607876 | Andy Wilson                                                                                                                                                                          |
-|  73 |     196.50112 |    109.951557 | Gareth Monger                                                                                                                                                                        |
-|  74 |     177.93812 |    608.217115 | Conty (vectorized by T. Michael Keesey)                                                                                                                                              |
-|  75 |     931.12830 |    499.988784 | Verisimilus                                                                                                                                                                          |
-|  76 |     248.41769 |    615.689162 | Dexter R. Mardis                                                                                                                                                                     |
-|  77 |     170.11633 |    781.635784 | Gabriela Palomo-Munoz                                                                                                                                                                |
-|  78 |     150.96365 |    173.037798 | Xavier A. Jenkins, Gabriel Ugueto                                                                                                                                                    |
-|  79 |     431.58582 |    623.826217 | Stanton F. Fink, vectorized by Zimices                                                                                                                                               |
-|  80 |     325.04777 |    431.948753 | Birgit Lang                                                                                                                                                                          |
-|  81 |     320.94230 |    492.727914 | Jagged Fang Designs                                                                                                                                                                  |
-|  82 |     642.66588 |    570.660995 | Robbie N. Cada (modified by T. Michael Keesey)                                                                                                                                       |
-|  83 |     323.22786 |    376.972546 | Anthony Caravaggi                                                                                                                                                                    |
-|  84 |     700.37362 |    640.841961 | C. Camilo Julián-Caballero                                                                                                                                                           |
-|  85 |     782.80592 |    761.319144 | Nobu Tamura, vectorized by Zimices                                                                                                                                                   |
-|  86 |    1001.92574 |    545.265523 | Sergio A. Muñoz-Gómez                                                                                                                                                                |
-|  87 |     335.49754 |    272.096694 | Matt Crook                                                                                                                                                                           |
-|  88 |     308.46354 |    129.382293 | Gareth Monger                                                                                                                                                                        |
-|  89 |     857.94970 |    761.017016 | Michael P. Taylor                                                                                                                                                                    |
-|  90 |      34.43685 |     21.495430 | Zimices                                                                                                                                                                              |
-|  91 |     546.10283 |    380.304157 | Sharon Wegner-Larsen                                                                                                                                                                 |
-|  92 |     908.86619 |     13.143505 | Allison Pease                                                                                                                                                                        |
-|  93 |     811.88916 |     11.376680 | Ghedoghedo (vectorized by T. Michael Keesey)                                                                                                                                         |
-|  94 |     993.26433 |     49.961336 | Michael Scroggie                                                                                                                                                                     |
-|  95 |     945.67983 |    237.981754 | Andy Wilson                                                                                                                                                                          |
-|  96 |     992.70389 |    137.021028 | Gabriela Palomo-Munoz                                                                                                                                                                |
-|  97 |      84.69920 |    433.604458 | David Tana                                                                                                                                                                           |
-|  98 |     707.16540 |    488.526119 | Diego Fontaneto, Elisabeth A. Herniou, Chiara Boschetti, Manuela Caprioli, Giulio Melone, Claudia Ricci, and Timothy G. Barraclough (vectorized by T. Michael Keesey)                |
-|  99 |     423.40709 |    688.619604 | Tony Ayling (vectorized by T. Michael Keesey)                                                                                                                                        |
-| 100 |      85.06095 |     31.279839 | SecretJellyMan                                                                                                                                                                       |
-| 101 |     361.15140 |    682.786092 | Matt Crook                                                                                                                                                                           |
-| 102 |     173.50537 |    670.763528 | Iain Reid                                                                                                                                                                            |
-| 103 |     807.72000 |    668.086043 | Zimices                                                                                                                                                                              |
-| 104 |      31.68630 |    171.703786 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 105 |     508.74270 |    473.240814 | Robbie N. Cada (vectorized by T. Michael Keesey)                                                                                                                                     |
-| 106 |     588.04681 |     15.676046 | Ignacio Contreras                                                                                                                                                                    |
-| 107 |     268.84132 |     90.373275 | Michael Scroggie                                                                                                                                                                     |
-| 108 |     492.61232 |    711.166947 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-| 109 |     262.95632 |    173.969572 | Zimices                                                                                                                                                                              |
-| 110 |     863.31740 |    229.345837 | Gareth Monger                                                                                                                                                                        |
-| 111 |     147.85017 |    714.845627 | Erika Schumacher                                                                                                                                                                     |
-| 112 |     971.39238 |    113.257927 | T. Michael Keesey (after Tillyard)                                                                                                                                                   |
-| 113 |     873.54901 |    178.057760 | Cesar Julian                                                                                                                                                                         |
-| 114 |     672.08832 |    154.628316 | Noah Schlottman, photo by Museum of Geology, University of Tartu                                                                                                                     |
-| 115 |     622.06703 |    514.353389 | Ferran Sayol                                                                                                                                                                         |
-| 116 |     705.82661 |    133.543788 | Robert Bruce Horsfall (vectorized by T. Michael Keesey)                                                                                                                              |
-| 117 |     326.76824 |    630.654463 | Steven Traver                                                                                                                                                                        |
-| 118 |     876.90792 |    635.601996 | Yan Wong (vectorization) from 1873 illustration                                                                                                                                      |
-| 119 |     996.63792 |    408.884763 | Matt Martyniuk                                                                                                                                                                       |
-| 120 |     298.85727 |      7.397330 | Chris huh                                                                                                                                                                            |
-| 121 |     117.79430 |    143.027926 | NA                                                                                                                                                                                   |
-| 122 |     729.06714 |     73.978403 | Marie Russell                                                                                                                                                                        |
-| 123 |      42.42380 |    744.291410 | Gareth Monger                                                                                                                                                                        |
-| 124 |     802.39387 |    316.015466 | Gareth Monger                                                                                                                                                                        |
-| 125 |     995.53725 |    587.825406 | Ferran Sayol                                                                                                                                                                         |
-| 126 |     917.99769 |    577.717424 | Andy Wilson                                                                                                                                                                          |
-| 127 |     353.25720 |    356.335297 | Rebecca Groom                                                                                                                                                                        |
-| 128 |      42.21183 |     94.567261 | Steven Traver                                                                                                                                                                        |
-| 129 |     558.40942 |    203.008465 | Zimices                                                                                                                                                                              |
-| 130 |     621.01523 |    735.278930 | Matt Crook                                                                                                                                                                           |
-| 131 |     628.05082 |    210.432469 | Matt Martyniuk (modified by T. Michael Keesey)                                                                                                                                       |
-| 132 |     172.18914 |    523.245688 | Ingo Braasch                                                                                                                                                                         |
-| 133 |     743.39169 |    626.416968 | Adam Stuart Smith (vectorized by T. Michael Keesey)                                                                                                                                  |
-| 134 |      43.80300 |    482.539461 | Aviceda (photo) & T. Michael Keesey                                                                                                                                                  |
-| 135 |     730.67996 |    446.244180 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 136 |     182.59523 |    320.266571 | Gareth Monger                                                                                                                                                                        |
-| 137 |     975.78499 |    361.422480 | Sam Droege (photo) and T. Michael Keesey (vectorization)                                                                                                                             |
-| 138 |     902.24242 |    758.871768 | Steven Traver                                                                                                                                                                        |
-| 139 |    1012.23742 |    709.234817 | NA                                                                                                                                                                                   |
-| 140 |      30.90873 |    314.882670 | Mariana Ruiz Villarreal (modified by T. Michael Keesey)                                                                                                                              |
-| 141 |      46.63294 |    370.211334 | Lukasiniho                                                                                                                                                                           |
-| 142 |      92.69484 |     70.957538 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 143 |     639.94109 |    409.997202 | NA                                                                                                                                                                                   |
-| 144 |     371.97855 |    647.064360 | Chris huh                                                                                                                                                                            |
-| 145 |     512.88757 |    185.731522 | T. Michael Keesey (after Mauricio Antón)                                                                                                                                             |
-| 146 |     140.45173 |    519.180651 | Chris huh                                                                                                                                                                            |
-| 147 |     902.56650 |    649.359556 | CNZdenek                                                                                                                                                                             |
-| 148 |     671.66754 |    417.948573 | Jaime A. Headden (vectorized by T. Michael Keesey)                                                                                                                                   |
-| 149 |     428.27660 |    782.440383 | Chris huh                                                                                                                                                                            |
-| 150 |     834.01245 |    783.005890 | Jagged Fang Designs                                                                                                                                                                  |
-| 151 |     140.04223 |    129.612485 | Pete Buchholz                                                                                                                                                                        |
-| 152 |     771.16580 |    707.421341 | M Kolmann                                                                                                                                                                            |
-| 153 |      76.60273 |    542.861075 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-| 154 |     299.55399 |    373.439563 | Jessica Anne Miller                                                                                                                                                                  |
-| 155 |     656.25364 |    185.195968 | Ferran Sayol                                                                                                                                                                         |
-| 156 |      22.71928 |    292.041697 | Jagged Fang Designs                                                                                                                                                                  |
-| 157 |      95.92541 |    627.694298 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-| 158 |     877.23671 |    683.075505 | Paul Baker (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey                           |
-| 159 |     592.25535 |    588.932178 | Jaime Headden (vectorized by T. Michael Keesey)                                                                                                                                      |
-| 160 |     603.96232 |     75.836891 | Skye McDavid                                                                                                                                                                         |
-| 161 |     337.39255 |    191.687420 | Maija Karala                                                                                                                                                                         |
-| 162 |     636.34851 |    619.459396 | Gareth Monger                                                                                                                                                                        |
-| 163 |    1002.60494 |     95.960840 | Margot Michaud                                                                                                                                                                       |
-| 164 |     232.24349 |    271.151552 | Dmitry Bogdanov (vectorized by T. Michael Keesey)                                                                                                                                    |
-| 165 |     252.49627 |    739.603108 | Matt Martyniuk                                                                                                                                                                       |
-| 166 |     867.95251 |     39.908566 | Margot Michaud                                                                                                                                                                       |
-| 167 |      94.27834 |    795.758233 | Arthur S. Brum                                                                                                                                                                       |
-| 168 |     738.47261 |    750.974364 | Birgit Lang                                                                                                                                                                          |
-| 169 |     756.94735 |    299.566619 | Alexandre Vong                                                                                                                                                                       |
-| 170 |     385.00599 |     52.484657 | Scott Hartman                                                                                                                                                                        |
-| 171 |     118.06989 |    776.864830 | Catherine Yasuda                                                                                                                                                                     |
-| 172 |     228.89039 |    787.989454 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 173 |     779.93230 |    303.983527 | Matt Crook                                                                                                                                                                           |
-| 174 |     384.24768 |    582.371440 | Caleb M. Brown                                                                                                                                                                       |
-| 175 |     815.80392 |    623.634546 | NA                                                                                                                                                                                   |
-| 176 |     740.13464 |    513.231596 | Andy Wilson                                                                                                                                                                          |
-| 177 |     785.38543 |    354.313142 | Andy Wilson                                                                                                                                                                          |
-| 178 |     304.03396 |    722.225905 | Tyler Greenfield                                                                                                                                                                     |
-| 179 |     617.52512 |    140.338284 | NA                                                                                                                                                                                   |
-| 180 |     201.57293 |    168.415840 | Jiekun He                                                                                                                                                                            |
-| 181 |     855.91906 |    383.701884 | Gareth Monger                                                                                                                                                                        |
-| 182 |     292.90646 |     47.193001 | Gareth Monger                                                                                                                                                                        |
-| 183 |     111.48803 |     98.914518 | Renato Santos                                                                                                                                                                        |
-| 184 |     249.56741 |    349.282232 | NA                                                                                                                                                                                   |
-| 185 |     762.21259 |    594.822853 | Kanchi Nanjo                                                                                                                                                                         |
-| 186 |      16.71725 |    609.485725 | Matt Crook                                                                                                                                                                           |
-| 187 |     939.06603 |    564.116472 | Andrew R. Gehrke                                                                                                                                                                     |
-| 188 |     463.19463 |    655.085387 | Mathew Wedel                                                                                                                                                                         |
-| 189 |      73.79782 |     77.333487 | NA                                                                                                                                                                                   |
-| 190 |      36.19605 |    771.905801 | Markus A. Grohme                                                                                                                                                                     |
-| 191 |      42.67090 |    786.750117 | Ferran Sayol                                                                                                                                                                         |
-| 192 |     171.54258 |    382.869670 | Margot Michaud                                                                                                                                                                       |
-| 193 |     843.45081 |    504.470730 | Jagged Fang Designs                                                                                                                                                                  |
-| 194 |     883.74754 |    789.227634 | Christoph Schomburg                                                                                                                                                                  |
-| 195 |     639.73729 |     14.315319 | Maija Karala                                                                                                                                                                         |
-| 196 |     461.47764 |     21.625876 | Ingo Braasch                                                                                                                                                                         |
-| 197 |     861.07953 |    290.927603 | Jaime Headden, modified by T. Michael Keesey                                                                                                                                         |
-| 198 |     528.76376 |    740.174889 | Alyssa Bell & Luis Chiappe 2015, dx.doi.org/10.1371/journal.pone.0141690                                                                                                             |
-| 199 |     969.27703 |    613.295260 | Ingo Braasch                                                                                                                                                                         |
-| 200 |     848.17235 |    743.894340 | Juan Carlos Jerí                                                                                                                                                                     |
-| 201 |     813.63114 |    571.703513 | Dave Souza (vectorized by T. Michael Keesey)                                                                                                                                         |
-| 202 |    1000.84314 |    614.514706 | Beth Reinke                                                                                                                                                                          |
-| 203 |      85.07817 |    568.587867 | Scott Hartman                                                                                                                                                                        |
-| 204 |     168.80624 |    492.351870 | NA                                                                                                                                                                                   |
-| 205 |     191.42034 |    373.294429 | NA                                                                                                                                                                                   |
-| 206 |     307.36218 |    658.680901 | Scott Hartman                                                                                                                                                                        |
-| 207 |     757.79294 |    443.262653 | Manabu Sakamoto                                                                                                                                                                      |
-| 208 |      17.64015 |     76.328151 | Martin Kevil                                                                                                                                                                         |
-| 209 |     297.18025 |    181.391274 | Sean McCann                                                                                                                                                                          |
-| 210 |      37.99781 |    204.866670 | Steven Traver                                                                                                                                                                        |
-| 211 |    1007.70738 |    775.112176 | Matt Crook                                                                                                                                                                           |
-| 212 |     972.05465 |    166.085452 | Yan Wong from photo by Gyik Toma                                                                                                                                                     |
-| 213 |     265.40407 |    276.608108 | T. Michael Keesey                                                                                                                                                                    |
-| 214 |     228.44368 |    577.426864 | Scott Hartman                                                                                                                                                                        |
-| 215 |     521.39999 |    720.267456 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 216 |     358.37536 |    229.543449 | NA                                                                                                                                                                                   |
-| 217 |      46.02272 |     55.224345 | Matt Crook                                                                                                                                                                           |
-| 218 |     530.85342 |    411.998540 | Gareth Monger                                                                                                                                                                        |
-| 219 |     878.16153 |    425.573210 | Manabu Sakamoto                                                                                                                                                                      |
-| 220 |     986.37251 |    783.625587 | Andy Wilson                                                                                                                                                                          |
-| 221 |     888.27123 |    713.489628 | Darren Naish (vectorized by T. Michael Keesey)                                                                                                                                       |
-| 222 |     836.74193 |    621.310171 | Margot Michaud                                                                                                                                                                       |
-| 223 |      35.09023 |    549.753598 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-| 224 |     844.47836 |    325.322570 | Margot Michaud                                                                                                                                                                       |
-| 225 |     775.14480 |    177.843624 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 226 |     224.33265 |     94.539161 | Armin Reindl                                                                                                                                                                         |
-| 227 |     632.61665 |    552.860790 | Chris huh                                                                                                                                                                            |
-| 228 |     973.91664 |    549.507578 | Matt Crook                                                                                                                                                                           |
-| 229 |     961.71427 |    339.922072 | Tauana J. Cunha                                                                                                                                                                      |
-| 230 |     752.98261 |     56.138245 | Unknown (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey                              |
-| 231 |     558.57837 |    266.951892 | Zimices                                                                                                                                                                              |
-| 232 |     705.07822 |    573.157472 | G. M. Woodward                                                                                                                                                                       |
-| 233 |     310.84606 |    164.154473 | Carlos Cano-Barbacil                                                                                                                                                                 |
-| 234 |     255.68286 |    230.076212 | Margot Michaud                                                                                                                                                                       |
-| 235 |     113.57012 |    206.257620 | T. Michael Keesey (vectorization) and Nadiatalent (photography)                                                                                                                      |
-| 236 |    1005.46126 |    312.404198 | Jake Warner                                                                                                                                                                          |
-| 237 |     329.46297 |    272.506290 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-| 238 |     993.14957 |    189.601152 | T. Michael Keesey (after MPF)                                                                                                                                                        |
-| 239 |     299.64785 |    633.565098 | Matthias Buschmann (vectorized by T. Michael Keesey)                                                                                                                                 |
-| 240 |     583.64218 |    725.328585 | Scott Hartman                                                                                                                                                                        |
-| 241 |     878.19496 |     26.412565 | Beth Reinke                                                                                                                                                                          |
-| 242 |     584.53826 |    477.211016 | NA                                                                                                                                                                                   |
-| 243 |      43.09745 |    515.063926 | Scott Hartman                                                                                                                                                                        |
-| 244 |     117.24304 |    321.389558 | Steven Traver                                                                                                                                                                        |
-| 245 |      15.60803 |    101.498081 | Beth Reinke                                                                                                                                                                          |
-| 246 |     355.89176 |    388.984149 | T. Michael Keesey                                                                                                                                                                    |
-| 247 |     284.38679 |    327.250587 | Kent Elson Sorgon                                                                                                                                                                    |
-| 248 |      81.13319 |    769.700688 | Crystal Maier                                                                                                                                                                        |
-| 249 |     457.14281 |      8.267023 | Haplochromis (vectorized by T. Michael Keesey)                                                                                                                                       |
-| 250 |     728.99075 |    730.408521 | Tasman Dixon                                                                                                                                                                         |
-| 251 |     854.47298 |    644.041682 | NA                                                                                                                                                                                   |
-| 252 |     763.47558 |    148.263026 | Matt Crook                                                                                                                                                                           |
-| 253 |     224.86375 |    315.299310 | Felix Vaux                                                                                                                                                                           |
-| 254 |     251.59915 |    765.746679 | M. A. Broussard                                                                                                                                                                      |
-| 255 |     813.53705 |    283.368741 | Gareth Monger                                                                                                                                                                        |
-| 256 |     518.39489 |    217.383820 | Matt Wilkins                                                                                                                                                                         |
-| 257 |     763.82472 |    779.751491 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-| 258 |      20.80512 |    343.424873 | NA                                                                                                                                                                                   |
-| 259 |     686.30752 |    734.239270 | Markus A. Grohme                                                                                                                                                                     |
-| 260 |     720.02502 |     45.758611 | Zimices                                                                                                                                                                              |
-| 261 |    1003.57941 |    669.710896 | Gareth Monger                                                                                                                                                                        |
-| 262 |     871.32488 |    276.441874 | Margot Michaud                                                                                                                                                                       |
-| 263 |      45.33509 |    329.465093 | Maija Karala                                                                                                                                                                         |
-| 264 |    1008.46653 |    442.123668 | Matt Wilkins                                                                                                                                                                         |
-| 265 |     980.23584 |    411.568242 | Gareth Monger                                                                                                                                                                        |
-| 266 |     774.39219 |     51.017407 | Tyler Greenfield and Dean Schnabel                                                                                                                                                   |
-| 267 |     711.39319 |    107.362319 | Ferran Sayol                                                                                                                                                                         |
-| 268 |     280.23848 |    652.884205 | Scott Hartman                                                                                                                                                                        |
-| 269 |     529.32918 |    201.585555 | Sarah Alewijnse                                                                                                                                                                      |
-| 270 |     666.62524 |    605.337248 | Heinrich Harder (vectorized by William Gearty)                                                                                                                                       |
-| 271 |     238.18758 |    404.875013 | Scott Hartman                                                                                                                                                                        |
-| 272 |     524.69039 |    552.962739 | Darren Naish (vectorized by T. Michael Keesey)                                                                                                                                       |
-| 273 |     202.81232 |    764.744651 | Neil Kelley                                                                                                                                                                          |
-| 274 |     632.38788 |    459.785565 | L. Shyamal                                                                                                                                                                           |
-| 275 |     568.10172 |    739.091211 | Chris huh                                                                                                                                                                            |
-| 276 |    1007.89681 |    365.324662 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 277 |     136.85836 |    206.612989 | Ferran Sayol                                                                                                                                                                         |
-| 278 |    1002.65788 |    683.888507 | S.Martini                                                                                                                                                                            |
-| 279 |     782.98652 |    395.079091 | Neil Kelley                                                                                                                                                                          |
-| 280 |     854.82515 |     27.492031 | Tasman Dixon                                                                                                                                                                         |
-| 281 |     259.61860 |     48.545509 | Zimices                                                                                                                                                                              |
-| 282 |     791.49157 |    779.240230 | Steven Traver                                                                                                                                                                        |
-| 283 |     109.38750 |    172.699105 | NA                                                                                                                                                                                   |
-| 284 |     844.55262 |    445.259038 | Markus A. Grohme                                                                                                                                                                     |
-| 285 |     926.95155 |    384.609523 | Christine Axon                                                                                                                                                                       |
-| 286 |     538.08699 |     17.596978 | Scott Hartman                                                                                                                                                                        |
-| 287 |     602.46599 |    385.700510 | Zimices                                                                                                                                                                              |
-| 288 |     874.76380 |    303.754918 | Tasman Dixon                                                                                                                                                                         |
-| 289 |     365.69147 |    664.455871 | Zimices                                                                                                                                                                              |
-| 290 |     669.25294 |    363.586410 | Falconaumanni and T. Michael Keesey                                                                                                                                                  |
-| 291 |     739.61273 |     87.324205 | NA                                                                                                                                                                                   |
-| 292 |     582.09688 |    105.836156 | Iain Reid                                                                                                                                                                            |
-| 293 |      84.94239 |    317.734427 | FunkMonk                                                                                                                                                                             |
-| 294 |     955.46307 |    314.515822 | Gareth Monger                                                                                                                                                                        |
-| 295 |     697.56362 |    617.915424 | Birgit Lang                                                                                                                                                                          |
-| 296 |     398.64375 |    777.114923 | Andy Wilson                                                                                                                                                                          |
-| 297 |     357.07593 |     21.678522 | Collin Gross                                                                                                                                                                         |
-| 298 |     651.03581 |    330.531278 | Jagged Fang Designs                                                                                                                                                                  |
-| 299 |     539.48379 |    279.909345 | Nobu Tamura                                                                                                                                                                          |
-| 300 |     287.93255 |    463.315611 | Lukasiniho                                                                                                                                                                           |
-| 301 |      34.99083 |    293.542864 | Scott Hartman                                                                                                                                                                        |
-| 302 |     353.25054 |    418.870819 | Collin Gross                                                                                                                                                                         |
-| 303 |     821.42829 |    647.278867 | NA                                                                                                                                                                                   |
-| 304 |      18.24377 |    274.767687 | Caleb M. Brown                                                                                                                                                                       |
-| 305 |      43.42163 |    433.660260 | NA                                                                                                                                                                                   |
-| 306 |     730.47989 |    204.502208 | Birgit Lang                                                                                                                                                                          |
-| 307 |     984.57836 |    391.086163 | Manabu Sakamoto                                                                                                                                                                      |
-| 308 |      77.58242 |    552.392815 | Nobu Tamura                                                                                                                                                                          |
-| 309 |      61.71885 |    628.909014 | C. Camilo Julián-Caballero                                                                                                                                                           |
-| 310 |     286.49305 |     89.711251 | Kai R. Caspar                                                                                                                                                                        |
-| 311 |     963.67677 |    588.480320 | Ferran Sayol                                                                                                                                                                         |
-| 312 |     929.16568 |    781.527138 | Kailah Thorn & Mark Hutchinson                                                                                                                                                       |
-| 313 |     187.35112 |    464.613803 | Greg Schechter (original photo), Renato Santos (vector silhouette)                                                                                                                   |
-| 314 |     180.00772 |    156.452660 | Noah Schlottman                                                                                                                                                                      |
-| 315 |     700.84114 |    377.442202 | Steven Traver                                                                                                                                                                        |
-| 316 |     149.25163 |    242.128595 | NA                                                                                                                                                                                   |
-| 317 |     716.18676 |    540.071262 | Becky Barnes                                                                                                                                                                         |
-| 318 |    1005.71484 |    282.258596 | Liftarn                                                                                                                                                                              |
-| 319 |     675.14733 |     60.552335 | NA                                                                                                                                                                                   |
-| 320 |     976.21178 |    697.064355 | Emily Willoughby                                                                                                                                                                     |
-| 321 |     302.21270 |    101.023216 | Kamil S. Jaron                                                                                                                                                                       |
-| 322 |     116.23708 |    293.660845 | Lafage                                                                                                                                                                               |
-| 323 |      76.76985 |    522.432443 | Gareth Monger                                                                                                                                                                        |
-| 324 |     299.68280 |    530.736381 | Mathew Wedel                                                                                                                                                                         |
-| 325 |     322.28082 |     89.183987 | Kent Elson Sorgon                                                                                                                                                                    |
-| 326 |     138.33941 |    311.017556 | Mark Hofstetter (vectorized by T. Michael Keesey)                                                                                                                                    |
-| 327 |     160.46206 |    322.410434 | Peileppe                                                                                                                                                                             |
-| 328 |     758.88014 |    484.340800 | Mathieu Pélissié                                                                                                                                                                     |
-| 329 |     643.11041 |    157.550546 | Smokeybjb (vectorized by T. Michael Keesey)                                                                                                                                          |
-| 330 |     314.19068 |    331.336409 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 331 |     505.60082 |    734.715512 | Margot Michaud                                                                                                                                                                       |
-| 332 |     137.93724 |    632.704784 | Michelle Site                                                                                                                                                                        |
-| 333 |     328.04237 |    538.655960 | Alex Slavenko                                                                                                                                                                        |
-| 334 |    1002.36530 |    469.814669 | Kai R. Caspar                                                                                                                                                                        |
-| 335 |     742.99456 |    222.363989 | Kamil S. Jaron                                                                                                                                                                       |
-| 336 |     991.32384 |    337.867978 | Estelle Bourdon                                                                                                                                                                      |
-| 337 |      39.99286 |    267.441394 | Chris huh                                                                                                                                                                            |
-| 338 |     314.12781 |     36.490997 | Andrew A. Farke                                                                                                                                                                      |
-| 339 |     372.43002 |    272.083907 | Andy Wilson                                                                                                                                                                          |
-| 340 |     201.78775 |    517.020883 | Gopal Murali                                                                                                                                                                         |
-| 341 |     467.75297 |    643.744418 | Conty (vectorized by T. Michael Keesey)                                                                                                                                              |
-| 342 |     137.52508 |    373.558604 | Tasman Dixon                                                                                                                                                                         |
-| 343 |     278.95123 |    550.871770 | Mattia Menchetti                                                                                                                                                                     |
-| 344 |     623.28621 |    274.845448 | Jon Hill                                                                                                                                                                             |
-| 345 |     474.42732 |    615.452814 | Mathew Wedel                                                                                                                                                                         |
-| 346 |      54.98544 |    710.819468 | Scott Hartman                                                                                                                                                                        |
-| 347 |     543.98484 |    466.602954 | Felix Vaux                                                                                                                                                                           |
-| 348 |     140.65584 |    666.450916 | Gareth Monger                                                                                                                                                                        |
-| 349 |     342.13667 |     98.185557 | Scott Hartman                                                                                                                                                                        |
-| 350 |      51.80644 |    560.074373 | Zimices                                                                                                                                                                              |
-| 351 |     648.50369 |    531.692624 | T. Michael Keesey (vectorization); Thorsten Assmann, Jörn Buse, Claudia Drees, Ariel-Leib-Leonid Friedman, Tal Levanony, Andrea Matern, Anika Timm, and David W. Wrase (photography) |
-| 352 |     365.51677 |    783.464877 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-| 353 |     970.68658 |    578.998097 | Jagged Fang Designs                                                                                                                                                                  |
-| 354 |     537.64149 |    292.590658 | Jagged Fang Designs                                                                                                                                                                  |
-| 355 |     632.17361 |    479.056540 | Scott Hartman                                                                                                                                                                        |
-| 356 |     399.20503 |    649.772355 | Kimberly Haddrell                                                                                                                                                                    |
-| 357 |     464.65442 |    775.475968 | Birgit Lang                                                                                                                                                                          |
-| 358 |     602.08437 |    687.366473 | Matthew Hooge (vectorized by T. Michael Keesey)                                                                                                                                      |
-| 359 |     957.11184 |     10.608119 | Scott Hartman                                                                                                                                                                        |
-| 360 |     736.91274 |    478.123637 | Ferran Sayol                                                                                                                                                                         |
-| 361 |     587.21991 |    785.019587 | Margot Michaud                                                                                                                                                                       |
-| 362 |     440.35986 |    626.976205 | Jagged Fang Designs                                                                                                                                                                  |
-| 363 |     564.74936 |     93.096147 | Scott Hartman                                                                                                                                                                        |
-| 364 |     214.45317 |    669.041954 | Gareth Monger                                                                                                                                                                        |
-| 365 |     341.36292 |    652.674896 | Dmitry Bogdanov (vectorized by T. Michael Keesey)                                                                                                                                    |
-| 366 |     749.99608 |    527.500436 | Dmitry Bogdanov (vectorized by T. Michael Keesey)                                                                                                                                    |
-| 367 |      95.83902 |    398.548816 | Markus A. Grohme                                                                                                                                                                     |
-| 368 |    1006.43045 |    506.563688 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 369 |     517.54035 |      4.424454 | M Kolmann                                                                                                                                                                            |
-| 370 |     445.51531 |    704.415471 | Iain Reid                                                                                                                                                                            |
-| 371 |     793.91959 |    530.759727 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 372 |     954.23290 |    284.498498 | Ferran Sayol                                                                                                                                                                         |
-| 373 |     654.42955 |    781.063540 | Tasman Dixon                                                                                                                                                                         |
-| 374 |     792.03900 |    151.718467 | Chris huh                                                                                                                                                                            |
-| 375 |    1006.67043 |    651.115202 | Scott Reid                                                                                                                                                                           |
-| 376 |     161.46335 |    351.007179 | Isaure Scavezzoni                                                                                                                                                                    |
-| 377 |     281.38052 |    709.046534 | T. Michael Keesey                                                                                                                                                                    |
-| 378 |      90.10402 |    177.244934 | Gareth Monger                                                                                                                                                                        |
-| 379 |     863.01824 |    158.215553 | Matt Crook                                                                                                                                                                           |
-| 380 |     289.05485 |    347.987017 | Dean Schnabel                                                                                                                                                                        |
-| 381 |     281.05352 |    255.606546 | Cagri Cevrim                                                                                                                                                                         |
-| 382 |     582.22816 |    271.674409 | Sergio A. Muñoz-Gómez                                                                                                                                                                |
-| 383 |     887.63814 |     51.333215 | Tasman Dixon                                                                                                                                                                         |
-| 384 |     406.07900 |    717.175213 | Filip em                                                                                                                                                                             |
-| 385 |     787.31609 |    591.459130 | John Conway                                                                                                                                                                          |
-| 386 |     848.79755 |    437.616533 | Birgit Lang                                                                                                                                                                          |
-| 387 |     528.26995 |     84.989476 | Markus A. Grohme                                                                                                                                                                     |
-| 388 |     502.56000 |    162.639270 | Xavier Giroux-Bougard                                                                                                                                                                |
-| 389 |      15.00993 |    137.853937 | Kailah Thorn & Ben King                                                                                                                                                              |
-| 390 |     284.98414 |    754.498731 | Jagged Fang Designs                                                                                                                                                                  |
-| 391 |     888.74026 |    721.942257 | Juan Carlos Jerí                                                                                                                                                                     |
-| 392 |     875.88060 |     62.859130 | Scott Hartman                                                                                                                                                                        |
-| 393 |      31.72172 |    628.099373 | Tasman Dixon                                                                                                                                                                         |
-| 394 |     523.04117 |    662.450049 | Jaime Headden                                                                                                                                                                        |
-| 395 |     697.31938 |    714.763416 | Zimices                                                                                                                                                                              |
-| 396 |     906.17347 |    566.921462 | Alan Manson (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey                          |
-| 397 |     707.58407 |    176.613944 | Martin R. Smith                                                                                                                                                                      |
-| 398 |     735.33711 |    653.014593 | Walter Vladimir                                                                                                                                                                      |
-| 399 |     946.03373 |    790.700602 | Erika Schumacher                                                                                                                                                                     |
-| 400 |     288.43319 |    601.735993 | NA                                                                                                                                                                                   |
-| 401 |     148.33327 |    531.857418 | Maxwell Lefroy (vectorized by T. Michael Keesey)                                                                                                                                     |
-| 402 |     960.73099 |     91.200819 | Mathilde Cordellier                                                                                                                                                                  |
-| 403 |     547.42840 |    590.045799 | Rebecca Groom                                                                                                                                                                        |
-| 404 |     284.05835 |     37.516800 | Scott Hartman                                                                                                                                                                        |
-| 405 |     784.24463 |    580.151277 | Katie S. Collins                                                                                                                                                                     |
-| 406 |     986.21816 |    432.371067 | Scott Hartman                                                                                                                                                                        |
-| 407 |     885.16015 |    569.265202 | Margot Michaud                                                                                                                                                                       |
-| 408 |     439.35425 |    114.868219 | Zimices                                                                                                                                                                              |
-| 409 |     423.44275 |    708.723943 | Gareth Monger                                                                                                                                                                        |
-| 410 |    1006.41410 |    219.658226 | Beth Reinke                                                                                                                                                                          |
-| 411 |     779.49009 |    163.622432 | Gareth Monger                                                                                                                                                                        |
-| 412 |     330.11051 |     12.167085 | Tyler Greenfield and Scott Hartman                                                                                                                                                   |
-| 413 |     864.81282 |    344.636028 | NA                                                                                                                                                                                   |
-| 414 |      80.29215 |    738.970001 | Felix Vaux                                                                                                                                                                           |
-| 415 |     626.56685 |    707.989399 | Ignacio Contreras                                                                                                                                                                    |
-| 416 |     270.13073 |    216.220721 | Andrew A. Farke                                                                                                                                                                      |
-| 417 |     762.30953 |    792.482419 | Zimices                                                                                                                                                                              |
-| 418 |     394.19927 |    600.934485 | Jagged Fang Designs                                                                                                                                                                  |
-| 419 |     322.05017 |    155.508053 | Steven Traver                                                                                                                                                                        |
-| 420 |     295.60342 |    410.779051 | Matt Crook                                                                                                                                                                           |
-| 421 |     994.39759 |    378.326451 | NA                                                                                                                                                                                   |
-| 422 |     731.99311 |    382.835105 | Jagged Fang Designs                                                                                                                                                                  |
-| 423 |      48.96152 |    457.588201 | Margot Michaud                                                                                                                                                                       |
-| 424 |      16.58851 |     45.905433 | Matt Crook                                                                                                                                                                           |
-| 425 |     195.68221 |    794.549088 | Markus A. Grohme                                                                                                                                                                     |
-| 426 |      43.88441 |    347.802086 | Chris A. Hamilton                                                                                                                                                                    |
-| 427 |     563.39692 |      5.984833 | Conty (vectorized by T. Michael Keesey)                                                                                                                                              |
-| 428 |     115.09360 |    729.437251 | Beth Reinke                                                                                                                                                                          |
-| 429 |     675.16752 |     10.487994 | T. Michael Keesey                                                                                                                                                                    |
-| 430 |     337.58407 |    542.633838 | Armin Reindl                                                                                                                                                                         |
-| 431 |     838.58869 |    550.026587 | Martin R. Smith                                                                                                                                                                      |
-| 432 |     399.93264 |     66.744217 | Jagged Fang Designs                                                                                                                                                                  |
-| 433 |     195.57461 |    678.199681 | Ingo Braasch                                                                                                                                                                         |
-| 434 |     901.82990 |    165.111513 | Ignacio Contreras                                                                                                                                                                    |
-| 435 |     647.79396 |    446.083084 | FunkMonk                                                                                                                                                                             |
-| 436 |     899.60050 |     39.904315 | Michelle Site                                                                                                                                                                        |
-| 437 |     135.07164 |    442.676157 | Scott Hartman (modified by T. Michael Keesey)                                                                                                                                        |
-| 438 |     453.92565 |    506.367375 | Gareth Monger                                                                                                                                                                        |
-| 439 |     653.97638 |    732.145883 | Martin R. Smith, from photo by Jürgen Schoner                                                                                                                                        |
-| 440 |     565.79335 |    707.768318 | Margot Michaud                                                                                                                                                                       |
-| 441 |     122.42761 |    639.006263 | Mali’o Kodis, photograph by G. Giribet                                                                                                                                               |
-| 442 |     593.33712 |    280.414823 | Matt Crook                                                                                                                                                                           |
-| 443 |     330.67567 |    472.629104 | Gareth Monger                                                                                                                                                                        |
-| 444 |     583.43843 |    578.077210 | Siobhon Egan                                                                                                                                                                         |
-| 445 |     436.19807 |    646.683200 | Scott Hartman                                                                                                                                                                        |
-| 446 |     838.10914 |    301.988376 | Zimices                                                                                                                                                                              |
-| 447 |     916.90268 |    720.055590 | Jagged Fang Designs                                                                                                                                                                  |
-| 448 |     119.61215 |    511.087949 | NA                                                                                                                                                                                   |
-| 449 |     472.41778 |    683.825471 | Scott Hartman                                                                                                                                                                        |
-| 450 |     678.17196 |    558.041540 | Jagged Fang Designs                                                                                                                                                                  |
-| 451 |     245.74700 |    123.474227 | Joanna Wolfe                                                                                                                                                                         |
-| 452 |      98.08983 |    376.319505 | Nobu Tamura (modified by T. Michael Keesey)                                                                                                                                          |
-| 453 |     231.17243 |    366.583989 | Becky Barnes                                                                                                                                                                         |
-| 454 |     844.74180 |    796.637761 | NA                                                                                                                                                                                   |
-| 455 |     682.19807 |    392.482983 | Birgit Lang                                                                                                                                                                          |
-| 456 |     564.25429 |    695.799502 | CNZdenek                                                                                                                                                                             |
-| 457 |     826.33758 |    500.552414 | ДиБгд (vectorized by T. Michael Keesey)                                                                                                                                              |
-| 458 |      45.29561 |    286.045727 | Nobu Tamura, modified by Andrew A. Farke                                                                                                                                             |
-| 459 |     524.36985 |    487.788209 | Siobhon Egan                                                                                                                                                                         |
-| 460 |     949.75494 |    198.637769 | Jagged Fang Designs                                                                                                                                                                  |
-| 461 |     782.82598 |    343.447757 | Iain Reid                                                                                                                                                                            |
-| 462 |     703.60273 |     70.033950 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-| 463 |     723.70316 |    231.792061 | Zimices                                                                                                                                                                              |
-| 464 |     592.39645 |    537.625244 | Alexander Schmidt-Lebuhn                                                                                                                                                             |
-| 465 |     796.11133 |    693.392499 | Ingo Braasch                                                                                                                                                                         |
-| 466 |      60.71292 |     33.100308 | Tasman Dixon                                                                                                                                                                         |
-| 467 |     567.25674 |    160.702083 | Smokeybjb                                                                                                                                                                            |
-| 468 |     165.12825 |    656.507243 | Ignacio Contreras                                                                                                                                                                    |
-| 469 |     854.29783 |    490.123948 | NA                                                                                                                                                                                   |
-| 470 |     980.64331 |    771.351190 | Ignacio Contreras                                                                                                                                                                    |
-| 471 |     411.77754 |    511.339446 | T. Michael Keesey                                                                                                                                                                    |
-| 472 |     305.82467 |    287.226949 | Cagri Cevrim                                                                                                                                                                         |
-| 473 |     761.11058 |    504.346687 | Matt Martyniuk                                                                                                                                                                       |
-| 474 |     318.58057 |    600.174185 | Maija Karala                                                                                                                                                                         |
-| 475 |     760.35638 |    389.567879 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                                        |
-| 476 |     701.09044 |    533.787518 | Apokryltaros (vectorized by T. Michael Keesey)                                                                                                                                       |
-| 477 |     846.72197 |    453.330659 | Steven Traver                                                                                                                                                                        |
-| 478 |     571.29847 |     55.600369 | Gareth Monger                                                                                                                                                                        |
-| 479 |     635.12412 |    311.936392 | Scott Hartman                                                                                                                                                                        |
-| 480 |      82.99011 |    515.507614 | Verisimilus                                                                                                                                                                          |
-| 481 |     304.08713 |    515.961907 | Vijay Cavale (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey                         |
-| 482 |     380.53063 |     37.735851 | Markus A. Grohme                                                                                                                                                                     |
-| 483 |     155.52774 |    147.412830 | Zimices                                                                                                                                                                              |
-| 484 |      98.53210 |    639.241229 | Andy Wilson                                                                                                                                                                          |
-| 485 |     693.51735 |      8.001689 | Chris huh                                                                                                                                                                            |
-| 486 |     160.45208 |    158.174387 | Scott Hartman                                                                                                                                                                        |
-| 487 |     685.22340 |    174.745308 | Geoff Shaw                                                                                                                                                                           |
-| 488 |     313.62558 |    110.461260 | Michael P. Taylor                                                                                                                                                                    |
-| 489 |     967.22972 |    669.691421 | Jagged Fang Designs                                                                                                                                                                  |
-| 490 |     553.74515 |    286.760003 | Ewald Rübsamen                                                                                                                                                                       |
-| 491 |     546.49441 |    729.336707 | NA                                                                                                                                                                                   |
-| 492 |    1003.18314 |    234.262257 | Margot Michaud                                                                                                                                                                       |
-| 493 |     434.30965 |    600.925741 | Mathieu Pélissié                                                                                                                                                                     |
-| 494 |     875.14280 |    381.807792 | NA                                                                                                                                                                                   |
-| 495 |     270.41343 |    126.617278 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 496 |       9.80637 |    223.923888 | Gareth Monger                                                                                                                                                                        |
-| 497 |     880.12985 |    228.080778 | Gabriela Palomo-Munoz                                                                                                                                                                |
-| 498 |     269.24490 |    793.712222 | Carlos Cano-Barbacil                                                                                                                                                                 |
-| 499 |     869.99915 |    744.472497 | Zimices                                                                                                                                                                              |
-| 500 |     643.46087 |    304.667920 | Scott Hartman                                                                                                                                                                        |
-| 501 |     957.09690 |    479.518533 | Margot Michaud                                                                                                                                                                       |
-| 502 |     926.22651 |    659.988460 | Scott Hartman                                                                                                                                                                        |
-| 503 |     997.55916 |    264.268063 | Matt Crook                                                                                                                                                                           |
-| 504 |     270.35034 |    741.479784 | Farelli (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey                              |
-| 505 |     475.09629 |    794.373129 | Mercedes Yrayzoz (vectorized by T. Michael Keesey)                                                                                                                                   |
-| 506 |    1016.46902 |    586.217636 | Michael Scroggie                                                                                                                                                                     |
-| 507 |     379.98563 |    251.139046 | Zimices                                                                                                                                                                              |
-| 508 |     966.75190 |    297.512267 | Michelle Site                                                                                                                                                                        |
+|     | Image X Coord | Image Y Coord | Credit                                                                                                                                                         |
+| --: | ------------: | ------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   1 |    921.947667 |     21.084929 | Gabriela Palomo-Munoz                                                                                                                                          |
+|   2 |    371.802973 |    316.803375 | Ignacio Contreras                                                                                                                                              |
+|   3 |    778.409102 |    467.183141 | B. Duygu Özpolat                                                                                                                                               |
+|   4 |    643.788810 |    217.381654 | Matt Crook                                                                                                                                                     |
+|   5 |    120.366769 |    263.580916 | Steven Traver                                                                                                                                                  |
+|   6 |    406.182041 |    685.374444 | Matt Crook                                                                                                                                                     |
+|   7 |    931.925121 |    686.918761 | Chloé Schmidt                                                                                                                                                  |
+|   8 |    687.905787 |    366.409002 | Ferran Sayol                                                                                                                                                   |
+|   9 |    105.760629 |    729.967854 | Matt Crook                                                                                                                                                     |
+|  10 |    195.528404 |    542.788154 | Steven Traver                                                                                                                                                  |
+|  11 |    564.994467 |    304.130826 | Scott Hartman                                                                                                                                                  |
+|  12 |    745.268730 |     56.533261 | Erika Schumacher                                                                                                                                               |
+|  13 |    621.528880 |    527.923226 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+|  14 |    884.964951 |    150.376463 | Margot Michaud                                                                                                                                                 |
+|  15 |    773.038788 |    112.299912 | Steven Traver                                                                                                                                                  |
+|  16 |     90.446323 |    414.862614 | Michael P. Taylor                                                                                                                                              |
+|  17 |     70.209360 |    640.869087 | Tasman Dixon                                                                                                                                                   |
+|  18 |    544.990102 |    179.134024 | Gopal Murali                                                                                                                                                   |
+|  19 |    250.509043 |    175.237175 | Andrew A. Farke                                                                                                                                                |
+|  20 |    569.501135 |     59.022578 | Steven Traver                                                                                                                                                  |
+|  21 |     64.005584 |    509.055915 | Collin Gross                                                                                                                                                   |
+|  22 |    849.549512 |    335.521304 | Mark Hannaford (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey |
+|  23 |    744.116725 |    324.172195 | T. Michael Keesey (vector) and Stuart Halliday (photograph)                                                                                                    |
+|  24 |    625.128070 |    671.332100 | Sam Fraser-Smith (vectorized by T. Michael Keesey)                                                                                                             |
+|  25 |    750.305492 |    753.009411 | Shyamal                                                                                                                                                        |
+|  26 |    427.373541 |     32.446348 | Smokeybjb (modified by Mike Keesey)                                                                                                                            |
+|  27 |    862.736350 |    583.616297 | Jan A. Venter, Herbert H. T. Prins, David A. Balfour & Rob Slotow (vectorized by T. Michael Keesey)                                                            |
+|  28 |    921.423863 |    224.114059 | FunkMonk                                                                                                                                                       |
+|  29 |     98.896633 |    578.987799 | Milton Tan                                                                                                                                                     |
+|  30 |     61.600412 |     84.776708 | Margot Michaud                                                                                                                                                 |
+|  31 |    520.777478 |    388.766665 | Kamil S. Jaron                                                                                                                                                 |
+|  32 |    420.698268 |    115.527534 | Thea Boodhoo (photograph) and T. Michael Keesey (vectorization)                                                                                                |
+|  33 |    924.648329 |    404.367966 | Katie S. Collins                                                                                                                                               |
+|  34 |    275.959550 |     38.362562 | Smokeybjb, vectorized by Zimices                                                                                                                               |
+|  35 |    385.635531 |    481.489312 | NA                                                                                                                                                             |
+|  36 |    764.415722 |    655.155448 | Chris huh                                                                                                                                                      |
+|  37 |    546.203508 |    652.110147 | Steven Traver                                                                                                                                                  |
+|  38 |    591.563358 |    443.911244 | T. Michael Keesey                                                                                                                                              |
+|  39 |    255.764805 |    404.344008 | Markus A. Grohme                                                                                                                                               |
+|  40 |    789.536881 |    210.356889 | Matt Celeskey                                                                                                                                                  |
+|  41 |    415.148649 |    563.522312 | Zimices                                                                                                                                                        |
+|  42 |    210.080479 |    744.623073 | NA                                                                                                                                                             |
+|  43 |    169.250678 |    367.286892 | Mark Hannaford (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey |
+|  44 |    176.786095 |     79.083036 | Jose Carlos Arenas-Monroy                                                                                                                                      |
+|  45 |    873.716412 |    505.471096 | Emily Willoughby                                                                                                                                               |
+|  46 |    851.885253 |    713.924467 | Gareth Monger                                                                                                                                                  |
+|  47 |    231.437716 |    686.367824 | Markus A. Grohme                                                                                                                                               |
+|  48 |    195.549198 |    448.957796 | Noah Schlottman, photo by Casey Dunn                                                                                                                           |
+|  49 |    585.170848 |    777.532238 | C. Camilo Julián-Caballero                                                                                                                                     |
+|  50 |    759.149081 |    610.924061 | Noah Schlottman, photo from Casey Dunn                                                                                                                         |
+|  51 |    299.101130 |    619.757959 | Emily Jane McTavish, from Haeckel, E. H. P. A. (1904).Kunstformen der Natur. Bibliographisches                                                                 |
+|  52 |    720.153510 |    558.399366 | Margot Michaud                                                                                                                                                 |
+|  53 |    121.558886 |    146.163334 | NA                                                                                                                                                             |
+|  54 |    425.313369 |    204.799406 | C. Camilo Julián-Caballero                                                                                                                                     |
+|  55 |    893.437300 |    778.487817 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+|  56 |    966.991955 |    313.257443 | Noah Schlottman, photo from Casey Dunn                                                                                                                         |
+|  57 |    954.367193 |    122.289949 | White Wolf                                                                                                                                                     |
+|  58 |     55.432161 |    323.336156 | Maxime Dahirel                                                                                                                                                 |
+|  59 |    507.380132 |    507.947862 | Sarah Alewijnse                                                                                                                                                |
+|  60 |    515.255137 |    734.413663 | Scott Hartman                                                                                                                                                  |
+|  61 |    593.245562 |    554.962675 | Scott Hartman                                                                                                                                                  |
+|  62 |    618.569755 |    596.402529 | Markus A. Grohme                                                                                                                                               |
+|  63 |    319.349659 |     88.766559 | Tasman Dixon                                                                                                                                                   |
+|  64 |    716.899942 |    202.422068 | NA                                                                                                                                                             |
+|  65 |    783.896587 |    511.903023 | Espen Horn (model; vectorized by T. Michael Keesey from a photo by H. Zell)                                                                                    |
+|  66 |    156.077500 |     17.661258 | C. Camilo Julián-Caballero                                                                                                                                     |
+|  67 |    322.745984 |    442.354675 | Matt Crook                                                                                                                                                     |
+|  68 |    703.587525 |     15.160284 | Christoph Schomburg                                                                                                                                            |
+|  69 |    722.687878 |    280.841744 | Yan Wong from illustration by Jules Richard (1907)                                                                                                             |
+|  70 |    951.816270 |    745.383462 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+|  71 |    281.038091 |    505.793764 | Michelle Site                                                                                                                                                  |
+|  72 |    964.095936 |    478.322864 | Apokryltaros (vectorized by T. Michael Keesey)                                                                                                                 |
+|  73 |    436.099882 |    391.408165 | Ghedoghedo (vectorized by T. Michael Keesey)                                                                                                                   |
+|  74 |    498.009741 |     99.618456 | Gabriela Palomo-Munoz                                                                                                                                          |
+|  75 |    642.985309 |    130.063331 | Kai R. Caspar                                                                                                                                                  |
+|  76 |   1003.500397 |    620.023966 | Gareth Monger                                                                                                                                                  |
+|  77 |    899.218370 |     52.319863 | NA                                                                                                                                                             |
+|  78 |    731.916233 |    694.862492 | Markus A. Grohme                                                                                                                                               |
+|  79 |    737.289599 |    457.052320 | Noah Schlottman, photo by Casey Dunn                                                                                                                           |
+|  80 |    454.153781 |    769.645227 | Scott Hartman                                                                                                                                                  |
+|  81 |     85.681287 |    680.070087 | Nobu Tamura                                                                                                                                                    |
+|  82 |    839.185597 |    240.826137 | NA                                                                                                                                                             |
+|  83 |    472.494362 |    267.073081 | Chris huh                                                                                                                                                      |
+|  84 |    194.305944 |    643.133005 | Scott Hartman                                                                                                                                                  |
+|  85 |    810.709725 |    382.282363 | Zimices                                                                                                                                                        |
+|  86 |    347.842495 |    232.990209 | Scott Hartman                                                                                                                                                  |
+|  87 |    964.887988 |    629.705330 | Tess Linden                                                                                                                                                    |
+|  88 |    341.391783 |    154.469547 | Sean McCann                                                                                                                                                    |
+|  89 |    599.131299 |    733.817879 | Zimices                                                                                                                                                        |
+|  90 |    181.204438 |    619.017354 | Cesar Julian                                                                                                                                                   |
+|  91 |    924.653029 |     90.397747 | Chris huh                                                                                                                                                      |
+|  92 |    699.121291 |    440.257433 | Mathew Wedel                                                                                                                                                   |
+|  93 |     85.918535 |    448.013425 | Martin Kevil                                                                                                                                                   |
+|  94 |    288.688525 |    779.113262 | Chris huh                                                                                                                                                      |
+|  95 |    518.549283 |     26.339872 | Dexter R. Mardis                                                                                                                                               |
+|  96 |    268.702709 |    230.454121 | Margot Michaud                                                                                                                                                 |
+|  97 |    990.383513 |    541.144299 | Margot Michaud                                                                                                                                                 |
+|  98 |    855.450465 |     82.580941 | Scott Hartman                                                                                                                                                  |
+|  99 |    513.970927 |    268.581902 | Margot Michaud                                                                                                                                                 |
+| 100 |    493.646239 |    140.789910 | Matt Crook                                                                                                                                                     |
+| 101 |    314.771531 |    539.051293 | Thibaut Brunet                                                                                                                                                 |
+| 102 |    250.476768 |    111.223663 | Katie S. Collins                                                                                                                                               |
+| 103 |    883.236079 |    276.670410 | NA                                                                                                                                                             |
+| 104 |    661.894253 |     69.353474 | Margot Michaud                                                                                                                                                 |
+| 105 |     21.480488 |    771.653422 | Beth Reinke                                                                                                                                                    |
+| 106 |    562.994079 |    621.937589 | David Orr                                                                                                                                                      |
+| 107 |    482.609083 |     66.693963 | NA                                                                                                                                                             |
+| 108 |    130.649484 |    648.208273 | Lankester Edwin Ray (vectorized by T. Michael Keesey)                                                                                                          |
+| 109 |     22.510601 |    442.289127 | T. Michael Keesey                                                                                                                                              |
+| 110 |    628.703299 |    377.481982 | Scott Hartman (vectorized by William Gearty)                                                                                                                   |
+| 111 |     36.333124 |    149.711398 | NA                                                                                                                                                             |
+| 112 |    574.585219 |    270.672522 | Markus A. Grohme                                                                                                                                               |
+| 113 |    477.798054 |    736.494333 | Scott Hartman                                                                                                                                                  |
+| 114 |    175.648772 |    716.881723 | Margot Michaud                                                                                                                                                 |
+| 115 |    625.135553 |    288.188413 | Maija Karala                                                                                                                                                   |
+| 116 |    728.125317 |    638.756823 | Markus A. Grohme                                                                                                                                               |
+| 117 |    979.275985 |    586.723290 | Birgit Lang                                                                                                                                                    |
+| 118 |     79.866265 |    175.260884 | Konsta Happonen, from a CC-BY-NC image by pelhonen on iNaturalist                                                                                              |
+| 119 |    494.923847 |    582.321086 | Matt Crook                                                                                                                                                     |
+| 120 |    612.825264 |    495.328134 | Yan Wong                                                                                                                                                       |
+| 121 |     35.055008 |    700.513451 | Gareth Monger                                                                                                                                                  |
+| 122 |    128.935989 |    785.698028 | Matt Crook                                                                                                                                                     |
+| 123 |    580.017842 |    691.049817 | Ghedo (vectorized by T. Michael Keesey)                                                                                                                        |
+| 124 |    665.784361 |    624.948118 | Chris huh                                                                                                                                                      |
+| 125 |    164.247265 |    323.239334 | Tauana J. Cunha                                                                                                                                                |
+| 126 |     54.894772 |     33.732739 | Zimices                                                                                                                                                        |
+| 127 |    246.894698 |    361.739101 | Mason McNair                                                                                                                                                   |
+| 128 |    287.004632 |    379.790821 | Scott Reid                                                                                                                                                     |
+| 129 |     71.387821 |    722.631628 | Gareth Monger                                                                                                                                                  |
+| 130 |    234.192990 |    655.434863 | Shyamal                                                                                                                                                        |
+| 131 |    880.634623 |    187.403124 | Gareth Monger                                                                                                                                                  |
+| 132 |    828.693003 |    730.329463 | Roberto Díaz Sibaja                                                                                                                                            |
+| 133 |    610.046896 |    351.931685 | Jagged Fang Designs                                                                                                                                            |
+| 134 |    832.504080 |    621.920979 | Ray Simpson (vectorized by T. Michael Keesey)                                                                                                                  |
+| 135 |    997.637568 |    489.948714 | Cesar Julian                                                                                                                                                   |
+| 136 |     98.684709 |    352.156952 | Verdilak                                                                                                                                                       |
+| 137 |    309.994521 |    679.415442 | Zimices                                                                                                                                                        |
+| 138 |    968.790792 |      5.312379 | Jaime Headden                                                                                                                                                  |
+| 139 |    996.209990 |     22.246637 | Kamil S. Jaron                                                                                                                                                 |
+| 140 |    366.099535 |    106.400440 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 141 |    700.644234 |    758.238823 | Jagged Fang Designs                                                                                                                                            |
+| 142 |     98.738615 |    388.409293 | Steven Traver                                                                                                                                                  |
+| 143 |    200.326128 |    130.315753 | T. Michael Keesey (vectorization) and Tony Hisgett (photography)                                                                                               |
+| 144 |    253.059265 |    301.988451 | NA                                                                                                                                                             |
+| 145 |    369.928871 |    535.112769 | Steven Traver                                                                                                                                                  |
+| 146 |    322.767441 |    555.760629 | Ferran Sayol                                                                                                                                                   |
+| 147 |     63.393642 |    533.744269 | Pearson Scott Foresman (vectorized by T. Michael Keesey)                                                                                                       |
+| 148 |    625.112354 |    398.725880 | Yan Wong from wikipedia drawing (PD: Pearson Scott Foresman)                                                                                                   |
+| 149 |    111.041862 |    427.084420 | NA                                                                                                                                                             |
+| 150 |    863.249549 |    102.780898 | Zimices                                                                                                                                                        |
+| 151 |    392.555699 |    227.170379 | Rachel Shoop                                                                                                                                                   |
+| 152 |    677.673608 |    538.698964 | Caleb M. Brown                                                                                                                                                 |
+| 153 |    417.737505 |    530.840707 | Matt Dempsey                                                                                                                                                   |
+| 154 |    819.745557 |    417.642173 | David Orr                                                                                                                                                      |
+| 155 |   1009.298840 |     33.670996 | Smith609 and T. Michael Keesey                                                                                                                                 |
+| 156 |    327.003908 |    215.684816 | Yan Wong from photo by Denes Emoke                                                                                                                             |
+| 157 |    998.920047 |    371.998389 | Kamil S. Jaron                                                                                                                                                 |
+| 158 |    380.607713 |    772.488562 | Andy Wilson                                                                                                                                                    |
+| 159 |    430.154535 |    163.887359 | Birgit Lang                                                                                                                                                    |
+| 160 |     24.322042 |    594.836189 | Mercedes Yrayzoz (vectorized by T. Michael Keesey)                                                                                                             |
+| 161 |    281.393225 |    699.515279 | Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey.                                                                                       |
+| 162 |    315.617616 |    194.245999 | T. Michael Keesey                                                                                                                                              |
+| 163 |    423.585502 |    357.029399 | Noah Schlottman, photo by Reinhard Jahn                                                                                                                        |
+| 164 |    524.324536 |    720.964191 | Markus A. Grohme                                                                                                                                               |
+| 165 |    854.421806 |    427.189875 | Andrew R. Gehrke                                                                                                                                               |
+| 166 |   1001.594926 |     91.506049 | Smokeybjb, vectorized by Zimices                                                                                                                               |
+| 167 |    116.332962 |    188.255581 | Zimices                                                                                                                                                        |
+| 168 |    897.468419 |    199.194183 | Matt Crook                                                                                                                                                     |
+| 169 |    839.870079 |    681.801513 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 170 |    133.900775 |    759.724345 | Matt Crook                                                                                                                                                     |
+| 171 |    747.165512 |    360.523376 | Tasman Dixon                                                                                                                                                   |
+| 172 |    609.094479 |    194.229060 | Maija Karala                                                                                                                                                   |
+| 173 |    212.340751 |    509.694474 | Meliponicultor Itaymbere                                                                                                                                       |
+| 174 |    662.706401 |    787.765608 | Scarlet23 (vectorized by T. Michael Keesey)                                                                                                                    |
+| 175 |    643.638407 |     36.945010 | T. Michael Keesey (photo by Bc999 \[Black crow\])                                                                                                              |
+| 176 |    267.013926 |    545.303752 | Beth Reinke                                                                                                                                                    |
+| 177 |    158.870894 |    601.933041 | Margot Michaud                                                                                                                                                 |
+| 178 |    788.607200 |    768.620229 | Zimices                                                                                                                                                        |
+| 179 |    959.480773 |    160.125397 | Jan A. Venter, Herbert H. T. Prins, David A. Balfour & Rob Slotow (vectorized by T. Michael Keesey)                                                            |
+| 180 |    787.633381 |    567.690038 | T. Michael Keesey                                                                                                                                              |
+| 181 |    383.159321 |     61.795957 | Nobu Tamura, vectorized by Zimices                                                                                                                             |
+| 182 |    342.870705 |    193.821155 | Gareth Monger                                                                                                                                                  |
+| 183 |    819.758919 |    262.134610 | Chuanixn Yu                                                                                                                                                    |
+| 184 |    404.122835 |     51.604000 | NA                                                                                                                                                             |
+| 185 |    359.211507 |    395.750840 | Zimices                                                                                                                                                        |
+| 186 |    516.802267 |    457.720492 | Rebecca Groom                                                                                                                                                  |
+| 187 |    597.644798 |     20.565207 | Zimices                                                                                                                                                        |
+| 188 |    630.029742 |    179.885448 | Markus A. Grohme                                                                                                                                               |
+| 189 |    517.674284 |    693.306581 | Jagged Fang Designs                                                                                                                                            |
+| 190 |    682.573630 |    644.309217 | Sharon Wegner-Larsen                                                                                                                                           |
+| 191 |    759.345609 |    247.111369 | Emma Hughes                                                                                                                                                    |
+| 192 |    978.620432 |    782.834474 | Markus A. Grohme                                                                                                                                               |
+| 193 |    807.473730 |    684.699045 | Margot Michaud                                                                                                                                                 |
+| 194 |    363.367326 |    598.855428 | Gareth Monger                                                                                                                                                  |
+| 195 |    829.262228 |    184.313856 | Andrew A. Farke                                                                                                                                                |
+| 196 |    998.728158 |    717.685153 | Juan Carlos Jerí                                                                                                                                               |
+| 197 |     37.923278 |    743.340088 | Zimices                                                                                                                                                        |
+| 198 |    140.031016 |    550.960384 | Michelle Site                                                                                                                                                  |
+| 199 |    788.610783 |    543.757224 | Kai R. Caspar                                                                                                                                                  |
+| 200 |    120.810091 |    167.372198 | Markus A. Grohme                                                                                                                                               |
+| 201 |    946.249966 |     63.492967 | Apokryltaros (vectorized by T. Michael Keesey)                                                                                                                 |
+| 202 |    788.536482 |    173.176758 | Andy Wilson                                                                                                                                                    |
+| 203 |   1008.935063 |    345.669621 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 204 |     51.023836 |    422.734017 | Michelle Site                                                                                                                                                  |
+| 205 |    563.130513 |    106.936052 | Steven Traver                                                                                                                                                  |
+| 206 |    968.828112 |    179.277150 | FunkMonk                                                                                                                                                       |
+| 207 |    113.909945 |    488.027605 | Gareth Monger                                                                                                                                                  |
+| 208 |    780.980459 |    413.429577 | Matt Crook                                                                                                                                                     |
+| 209 |    221.686847 |    461.897723 | M. Antonio Todaro, Tobias Kånneby, Matteo Dal Zotto, and Ulf Jondelius (vectorized by T. Michael Keesey)                                                       |
+| 210 |    117.343788 |    560.885072 | NA                                                                                                                                                             |
+| 211 |    715.847677 |     41.454607 | Andy Wilson                                                                                                                                                    |
+| 212 |    447.095714 |    604.934107 | T. Tischler                                                                                                                                                    |
+| 213 |    827.359903 |    477.468818 | Ghedoghedo (vectorized by T. Michael Keesey)                                                                                                                   |
+| 214 |     34.867284 |    617.177158 | Tasman Dixon                                                                                                                                                   |
+| 215 |    787.178497 |    268.558753 | Jagged Fang Designs                                                                                                                                            |
+| 216 |    965.594792 |     75.394915 | Jagged Fang Designs                                                                                                                                            |
+| 217 |    749.408477 |    163.268025 | Andy Wilson                                                                                                                                                    |
+| 218 |    418.281855 |    607.694946 | Armin Reindl                                                                                                                                                   |
+| 219 |    702.502224 |    588.809051 | Scott Hartman                                                                                                                                                  |
+| 220 |     19.590912 |    316.919692 | NA                                                                                                                                                             |
+| 221 |     66.226629 |    785.544149 | Zimices                                                                                                                                                        |
+| 222 |    307.860022 |    393.018716 | Ingo Braasch                                                                                                                                                   |
+| 223 |    726.039179 |    295.846515 | Catherine Yasuda                                                                                                                                               |
+| 224 |     28.516178 |    569.678234 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 225 |    290.921416 |    721.187257 | Matt Crook                                                                                                                                                     |
+| 226 |    493.488413 |    702.847261 | Brockhaus and Efron                                                                                                                                            |
+| 227 |     76.175542 |    599.386960 | Steven Traver                                                                                                                                                  |
+| 228 |    417.200188 |    262.851912 | Steven Traver                                                                                                                                                  |
+| 229 |    148.490994 |    398.175024 | Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey.                                                                                       |
+| 230 |    999.608726 |    406.837984 | Matt Crook                                                                                                                                                     |
+| 231 |    507.961345 |    320.035269 | DW Bapst (modified from Bulman, 1970)                                                                                                                          |
+| 232 |    688.672555 |    725.212604 | Rebecca Groom                                                                                                                                                  |
+| 233 |     18.822306 |    380.868092 | Patrick Fisher (vectorized by T. Michael Keesey)                                                                                                               |
+| 234 |    239.191365 |    483.797613 | Gustav Mützel                                                                                                                                                  |
+| 235 |    452.941505 |    339.747181 | T. Michael Keesey                                                                                                                                              |
+| 236 |    686.344744 |     40.354567 | Manabu Sakamoto                                                                                                                                                |
+| 237 |    422.321253 |    415.795280 | Tasman Dixon                                                                                                                                                   |
+| 238 |    406.930610 |    751.117780 | Margot Michaud                                                                                                                                                 |
+| 239 |     20.737375 |    427.858746 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 240 |    474.754550 |    359.759769 | Margot Michaud                                                                                                                                                 |
+| 241 |     62.937402 |     12.031205 | B. Duygu Özpolat                                                                                                                                               |
+| 242 |    578.962494 |    493.385660 | Crystal Maier                                                                                                                                                  |
+| 243 |    917.830246 |    457.663927 | Katie S. Collins                                                                                                                                               |
+| 244 |    174.654537 |    179.665629 | Steven Traver                                                                                                                                                  |
+| 245 |    346.048786 |    123.179315 | Acrocynus (vectorized by T. Michael Keesey)                                                                                                                    |
+| 246 |    491.148865 |     42.938605 | Markus A. Grohme                                                                                                                                               |
+| 247 |   1008.691718 |    123.007729 | Gareth Monger                                                                                                                                                  |
+| 248 |    576.630276 |    381.205063 | Xavier Giroux-Bougard                                                                                                                                          |
+| 249 |    311.784288 |    246.754278 | Dmitry Bogdanov                                                                                                                                                |
+| 250 |    786.087074 |     11.537125 | Zimices                                                                                                                                                        |
+| 251 |    710.826426 |    714.707786 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+| 252 |    646.899874 |    303.920777 | Gareth Monger                                                                                                                                                  |
+| 253 |    633.661646 |    607.609932 | Chris huh                                                                                                                                                      |
+| 254 |    349.482076 |     14.139372 | Gordon E. Robertson                                                                                                                                            |
+| 255 |     18.622076 |    350.335436 | Alexander Schmidt-Lebuhn                                                                                                                                       |
+| 256 |    558.605946 |    580.931202 | Scott Hartman                                                                                                                                                  |
+| 257 |    924.991215 |    332.793641 | Matt Crook                                                                                                                                                     |
+| 258 |    863.238483 |    741.472750 | Christoph Schomburg                                                                                                                                            |
+| 259 |    985.652948 |    222.753577 | Smokeybjb                                                                                                                                                      |
+| 260 |    755.310356 |    378.835273 | Jagged Fang Designs                                                                                                                                            |
+| 261 |    445.536410 |    408.955590 | Scott Reid                                                                                                                                                     |
+| 262 |    847.201442 |    740.428837 | Gareth Monger                                                                                                                                                  |
+| 263 |    241.939656 |    207.471575 | Matt Crook                                                                                                                                                     |
+| 264 |    231.132357 |    611.426733 | Zimices                                                                                                                                                        |
+| 265 |    295.182981 |    424.816985 | Dmitry Bogdanov (vectorized by T. Michael Keesey)                                                                                                              |
+| 266 |    439.166377 |     71.892666 | Michelle Site                                                                                                                                                  |
+| 267 |    689.711231 |    426.819438 | Margot Michaud                                                                                                                                                 |
+| 268 |    999.786728 |    164.818910 | Armin Reindl                                                                                                                                                   |
+| 269 |    144.834400 |    189.839092 | Gareth Monger                                                                                                                                                  |
+| 270 |     44.469928 |    190.369034 | Margot Michaud                                                                                                                                                 |
+| 271 |    245.440183 |    449.415227 | Zimices                                                                                                                                                        |
+| 272 |    130.049812 |    604.553787 | S.Martini                                                                                                                                                      |
+| 273 |    732.086536 |    788.714932 | Maxwell Lefroy (vectorized by T. Michael Keesey)                                                                                                               |
+| 274 |    875.455406 |    622.456762 | Andy Wilson                                                                                                                                                    |
+| 275 |    758.876364 |    407.431721 | Katie S. Collins                                                                                                                                               |
+| 276 |    982.119939 |    763.175655 | Jay Matternes, vectorized by Zimices                                                                                                                           |
+| 277 |    270.639123 |    755.015256 | Chris huh                                                                                                                                                      |
+| 278 |   1006.684946 |    248.723449 | Margot Michaud                                                                                                                                                 |
+| 279 |    132.308145 |    107.878164 | Kanchi Nanjo                                                                                                                                                   |
+| 280 |    850.276454 |    208.717689 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+| 281 |     48.415600 |    389.711522 | Walter Vladimir                                                                                                                                                |
+| 282 |    667.649529 |    506.550905 | Lily Hughes                                                                                                                                                    |
+| 283 |    132.121656 |    459.761756 | Yan Wong                                                                                                                                                       |
+| 284 |     20.275193 |    282.324465 | Francisco Gascó (modified by Michael P. Taylor)                                                                                                                |
+| 285 |    508.390437 |    546.782520 | Aline M. Ghilardi                                                                                                                                              |
+| 286 |    914.833230 |    483.136866 | Matt Crook                                                                                                                                                     |
+| 287 |    784.584032 |    787.384772 | Cesar Julian                                                                                                                                                   |
+| 288 |    197.215567 |    785.642840 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 289 |    820.391187 |     66.283260 | Matt Crook                                                                                                                                                     |
+| 290 |    976.448040 |    105.003461 | Zimices                                                                                                                                                        |
+| 291 |    938.117865 |    568.685110 | Christina N. Hodson                                                                                                                                            |
+| 292 |    241.231668 |    321.531669 | Jessica Rick                                                                                                                                                   |
+| 293 |    845.240885 |     30.159181 | Margot Michaud                                                                                                                                                 |
+| 294 |    147.734594 |    430.848207 | Margot Michaud                                                                                                                                                 |
+| 295 |    148.324777 |    295.845337 | Chuanixn Yu                                                                                                                                                    |
+| 296 |    457.699697 |    429.776160 | Zimices                                                                                                                                                        |
+| 297 |    216.956540 |    716.007024 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 298 |    592.437677 |    711.946561 | Danny Cicchetti (vectorized by T. Michael Keesey)                                                                                                              |
+| 299 |    535.580980 |    487.457631 | T. Michael Keesey                                                                                                                                              |
+| 300 |    465.281690 |    395.588713 | Markus A. Grohme                                                                                                                                               |
+| 301 |    268.013322 |    568.940974 | Chloé Schmidt                                                                                                                                                  |
+| 302 |    868.258431 |    690.671970 | Kristina Gagalova                                                                                                                                              |
+| 303 |    846.170762 |    291.070398 | Sean McCann                                                                                                                                                    |
+| 304 |    590.676528 |    654.561470 | Kai R. Caspar                                                                                                                                                  |
+| 305 |    709.142043 |    499.322563 | Mason McNair                                                                                                                                                   |
+| 306 |    885.175743 |    253.926401 | Markus A. Grohme                                                                                                                                               |
+| 307 |    876.397323 |    561.944480 | Gareth Monger                                                                                                                                                  |
+| 308 |    788.162883 |    303.627265 | Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey.                                                                                       |
+| 309 |    591.520982 |    565.462772 | Jagged Fang Designs                                                                                                                                            |
+| 310 |    448.923911 |    166.476409 | Maxime Dahirel                                                                                                                                                 |
+| 311 |    272.734452 |    665.013190 | NA                                                                                                                                                             |
+| 312 |    728.113401 |    628.205624 | Jagged Fang Designs                                                                                                                                            |
+| 313 |    694.367655 |    787.764144 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 314 |    158.923005 |    789.688628 | Birgit Lang                                                                                                                                                    |
+| 315 |    692.344349 |    311.295874 | 于川云                                                                                                                                                            |
+| 316 |    933.525632 |    189.600084 | Dmitry Bogdanov (vectorized by T. Michael Keesey)                                                                                                              |
+| 317 |    224.465069 |    338.466919 | Zimices                                                                                                                                                        |
+| 318 |    643.946733 |    225.809581 | Roberto Diaz Sibaja, based on Domser                                                                                                                           |
+| 319 |     18.118955 |    405.307110 | SauropodomorphMonarch                                                                                                                                          |
+| 320 |    321.463122 |    413.119415 | Sean McCann                                                                                                                                                    |
+| 321 |    881.096814 |    543.342536 | Matt Crook                                                                                                                                                     |
+| 322 |    164.107238 |    667.919210 | Margot Michaud                                                                                                                                                 |
+| 323 |    196.355310 |    491.253284 | Steven Traver                                                                                                                                                  |
+| 324 |    250.529647 |    389.908496 | Margot Michaud                                                                                                                                                 |
+| 325 |    549.736197 |    153.657646 | CNZdenek                                                                                                                                                       |
+| 326 |    853.805286 |    649.734882 | Steven Traver                                                                                                                                                  |
+| 327 |    592.686944 |    247.277166 | Jagged Fang Designs                                                                                                                                            |
+| 328 |    701.461198 |    520.774980 | Steven Traver                                                                                                                                                  |
+| 329 |    821.070875 |    101.706544 | Margot Michaud                                                                                                                                                 |
+| 330 |    494.708067 |    249.966144 | C. Camilo Julián-Caballero                                                                                                                                     |
+| 331 |    542.400562 |     12.074652 | Ingo Braasch                                                                                                                                                   |
+| 332 |    994.943505 |    687.111260 | Zsoldos Márton (vectorized by T. Michael Keesey)                                                                                                               |
+| 333 |    285.252168 |    252.629536 | Abraão B. Leite                                                                                                                                                |
+| 334 |    928.146345 |    656.676361 | Margot Michaud                                                                                                                                                 |
+| 335 |    380.785570 |    624.046713 | Geoff Shaw                                                                                                                                                     |
+| 336 |    819.735176 |    647.754078 | Pranav Iyer (grey ideas)                                                                                                                                       |
+| 337 |    827.939350 |    744.976272 | Steven Coombs                                                                                                                                                  |
+| 338 |    510.803655 |      6.699846 | Chris huh                                                                                                                                                      |
+| 339 |    259.522550 |    264.862630 | Jiekun He                                                                                                                                                      |
+| 340 |    465.365922 |     57.482397 | NA                                                                                                                                                             |
+| 341 |    879.187960 |     69.331947 | Sebastian Stabinger                                                                                                                                            |
+| 342 |     59.151723 |    128.779282 | Scott Hartman                                                                                                                                                  |
+| 343 |    830.597150 |    785.076361 | Nobu Tamura, vectorized by Zimices                                                                                                                             |
+| 344 |     93.352341 |    773.234429 | Andrew A. Farke                                                                                                                                                |
+| 345 |   1000.238762 |    384.049491 | Robert Gay                                                                                                                                                     |
+| 346 |    934.721645 |    276.049690 | T. Michael Keesey                                                                                                                                              |
+| 347 |    742.846062 |    391.794097 | Shyamal                                                                                                                                                        |
+| 348 |    920.088377 |     70.296250 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+| 349 |     27.115351 |    263.456073 | Andy Wilson                                                                                                                                                    |
+| 350 |    464.386605 |     16.044933 | Chris Jennings (Risiatto)                                                                                                                                      |
+| 351 |    485.744066 |    315.874342 | Emily Willoughby                                                                                                                                               |
+| 352 |     85.544648 |    546.903547 | Anthony Caravaggi                                                                                                                                              |
+| 353 |    284.487338 |    733.794974 | Tasman Dixon                                                                                                                                                   |
+| 354 |    909.631201 |    282.236683 | Chris huh                                                                                                                                                      |
+| 355 |     36.491595 |    455.098832 | Jagged Fang Designs                                                                                                                                            |
+| 356 |    672.277751 |    739.091496 | Nobu Tamura, vectorized by Zimices                                                                                                                             |
+| 357 |     87.859273 |    568.439078 | Dmitry Bogdanov (vectorized by T. Michael Keesey)                                                                                                              |
+| 358 |    816.117434 |     87.452396 | Robert Gay, modified from FunkMonk (Michael B.H.) and T. Michael Keesey.                                                                                       |
+| 359 |    395.802145 |    420.361796 | Maija Karala                                                                                                                                                   |
+| 360 |    789.997770 |    630.248988 | Beth Reinke                                                                                                                                                    |
+| 361 |    549.511248 |    747.267750 | Scott Hartman                                                                                                                                                  |
+| 362 |    936.103332 |    622.621517 | Ferran Sayol                                                                                                                                                   |
+| 363 |     24.620840 |    635.351951 | Mette Aumala                                                                                                                                                   |
+| 364 |    380.223702 |    246.966372 | Andy Wilson                                                                                                                                                    |
+| 365 |    619.544645 |    274.213888 | Margot Michaud                                                                                                                                                 |
+| 366 |    667.756173 |    466.198295 | Carlos Cano-Barbacil                                                                                                                                           |
+| 367 |    172.775026 |    484.931011 | Gareth Monger                                                                                                                                                  |
+| 368 |    251.887337 |    470.715409 | Lafage                                                                                                                                                         |
+| 369 |    683.348315 |    717.782061 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+| 370 |    125.519897 |    356.188161 | T. Michael Keesey                                                                                                                                              |
+| 371 |   1005.608101 |    201.886895 | Steven Traver                                                                                                                                                  |
+| 372 |    987.481293 |     52.564337 | Robert Gay                                                                                                                                                     |
+| 373 |    756.797102 |    675.301626 | Noah Schlottman, photo by Martin V. Sørensen                                                                                                                   |
+| 374 |    260.527839 |    351.259993 | Alexander Schmidt-Lebuhn                                                                                                                                       |
+| 375 |    851.610732 |    794.578854 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+| 376 |    766.710558 |    714.220702 | Chris huh                                                                                                                                                      |
+| 377 |    640.032333 |    716.963331 | Anthony Caravaggi                                                                                                                                              |
+| 378 |    514.466980 |    632.572575 | Andrew R. Gehrke                                                                                                                                               |
+| 379 |    877.532991 |    120.556355 | Scott Hartman                                                                                                                                                  |
+| 380 |    755.325789 |    424.913167 | Skye McDavid                                                                                                                                                   |
+| 381 |    931.015090 |    140.641668 | Ferran Sayol                                                                                                                                                   |
+| 382 |    380.307170 |    174.656634 | Luc Viatour (source photo) and Andreas Plank                                                                                                                   |
+| 383 |    310.601974 |     67.686359 | Matt Crook                                                                                                                                                     |
+| 384 |    849.588666 |    251.466768 | Zimices                                                                                                                                                        |
+| 385 |    451.219964 |    138.263544 | Ignacio Contreras                                                                                                                                              |
+| 386 |    671.015516 |    758.325048 | Original drawing by Antonov, vectorized by Roberto Díaz Sibaja                                                                                                 |
+| 387 |   1003.858747 |    309.543564 | Mark Hofstetter (vectorized by T. Michael Keesey)                                                                                                              |
+| 388 |    329.273467 |     47.873180 | Tasman Dixon                                                                                                                                                   |
+| 389 |    516.950456 |    148.310068 | Ferran Sayol                                                                                                                                                   |
+| 390 |    916.773279 |    303.283155 | Anthony Caravaggi                                                                                                                                              |
+| 391 |    327.650531 |    667.831323 | Zimices                                                                                                                                                        |
+| 392 |    740.873328 |    122.232373 | Zimices                                                                                                                                                        |
+| 393 |     80.671618 |    377.117697 | Harold N Eyster                                                                                                                                                |
+| 394 |    645.208947 |    490.985892 | NA                                                                                                                                                             |
+| 395 |    199.628252 |    659.432915 | Steven Coombs                                                                                                                                                  |
+| 396 |    721.161302 |    349.312181 | Markus A. Grohme                                                                                                                                               |
+| 397 |    509.718921 |    530.778069 | David Tana                                                                                                                                                     |
+| 398 |    771.265710 |     34.504520 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 399 |    821.651008 |      8.020392 | Zimices                                                                                                                                                        |
+| 400 |    281.686397 |    138.900572 | Nobu Tamura, vectorized by Zimices                                                                                                                             |
+| 401 |    410.854085 |    623.552955 | Chase Brownstein                                                                                                                                               |
+| 402 |    473.242979 |    703.752706 | Chris huh                                                                                                                                                      |
+| 403 |    500.981570 |     37.830505 | Scott Hartman                                                                                                                                                  |
+| 404 |    672.545530 |    415.511166 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+| 405 |    626.679087 |    359.146245 | Amanda Katzer                                                                                                                                                  |
+| 406 |    689.730492 |    777.582103 | Zachary Quigley                                                                                                                                                |
+| 407 |    961.601290 |    598.057841 | Scott Hartman                                                                                                                                                  |
+| 408 |    796.823478 |    590.067128 | Steven Traver                                                                                                                                                  |
+| 409 |    554.500047 |    253.085573 | Margot Michaud                                                                                                                                                 |
+| 410 |    439.642934 |    731.221840 | Robert Bruce Horsfall, vectorized by Zimices                                                                                                                   |
+| 411 |    406.286087 |      8.646143 | NOAA Great Lakes Environmental Research Laboratory (illustration) and Timothy J. Bartley (silhouette)                                                          |
+| 412 |    668.623290 |    447.547899 | Scott Reid                                                                                                                                                     |
+| 413 |    233.719306 |    636.404510 | Andy Wilson                                                                                                                                                    |
+| 414 |    418.825252 |    231.901836 | Manabu Bessho-Uehara                                                                                                                                           |
+| 415 |    629.152761 |    621.175699 | Chris huh                                                                                                                                                      |
+| 416 |     72.369808 |    615.842338 | Walter Vladimir                                                                                                                                                |
+| 417 |     42.113093 |    653.845100 | Xavier A. Jenkins, Gabriel Ugueto                                                                                                                              |
+| 418 |    370.432215 |    643.565003 | NA                                                                                                                                                             |
+| 419 |    539.840146 |    570.034078 | Julio Garza                                                                                                                                                    |
+| 420 |    608.754539 |    320.706284 | Jaime Headden                                                                                                                                                  |
+| 421 |     95.782206 |    197.434371 | Kai R. Caspar                                                                                                                                                  |
+| 422 |    627.960396 |    627.281290 | Ignacio Contreras                                                                                                                                              |
+| 423 |    500.587930 |    478.122281 | Caleb M. Brown                                                                                                                                                 |
+| 424 |    342.866530 |    478.005454 | Samanta Orellana                                                                                                                                               |
+| 425 |    693.746880 |    453.373626 | Michael Scroggie, from original photograph by Gary M. Stolz, USFWS (original photograph in public domain).                                                     |
+| 426 |      8.091831 |    206.982586 | Kanchi Nanjo                                                                                                                                                   |
+| 427 |     35.446009 |     15.911780 | Jaime A. Headden (vectorized by T. Michael Keesey)                                                                                                             |
+| 428 |    543.597819 |    557.500863 | Markus A. Grohme                                                                                                                                               |
+| 429 |     96.631800 |    607.089011 | Andrew R. Gehrke                                                                                                                                               |
+| 430 |    279.143419 |    201.771991 | NA                                                                                                                                                             |
+| 431 |    241.490984 |    267.925321 | terngirl                                                                                                                                                       |
+| 432 |    342.633988 |    575.523002 | T. Michael Keesey                                                                                                                                              |
+| 433 |    103.254632 |     34.754455 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 434 |    921.237695 |    352.846397 | Steven Coombs                                                                                                                                                  |
+| 435 |    452.185681 |    245.731528 | Maxime Dahirel (digitisation), Kees van Achterberg et al (doi: 10.3897/BDJ.8.e49017)(original publication)                                                     |
+| 436 |    162.234082 |    133.715058 | Geoff Shaw                                                                                                                                                     |
+| 437 |   1008.690312 |    553.539485 | Kai R. Caspar                                                                                                                                                  |
+| 438 |    596.240204 |    240.409397 | Margot Michaud                                                                                                                                                 |
+| 439 |     56.239320 |    566.823548 | David Tana                                                                                                                                                     |
+| 440 |    521.670876 |    759.212739 | C. Camilo Julián-Caballero                                                                                                                                     |
+| 441 |   1014.579631 |    458.332239 | Gareth Monger                                                                                                                                                  |
+| 442 |    413.845033 |    596.627733 | Julia B McHugh                                                                                                                                                 |
+| 443 |    834.926242 |    699.332692 | Margot Michaud                                                                                                                                                 |
+| 444 |    160.021717 |    556.408028 | David Orr                                                                                                                                                      |
+| 445 |    798.822260 |    346.006724 | Collin Gross                                                                                                                                                   |
+| 446 |    633.793000 |    480.587441 | Tasman Dixon                                                                                                                                                   |
+| 447 |    488.621781 |     18.274599 | Auckland Museum and T. Michael Keesey                                                                                                                          |
+| 448 |     59.985282 |    694.614049 | FunkMonk (Michael B. H.)                                                                                                                                       |
+| 449 |    602.945356 |    489.005179 | NA                                                                                                                                                             |
+| 450 |    221.382010 |    354.521974 | T. Michael Keesey                                                                                                                                              |
+| 451 |    315.570075 |    383.732299 | T. Michael Keesey                                                                                                                                              |
+| 452 |    208.476736 |    598.078747 | Margot Michaud                                                                                                                                                 |
+| 453 |    207.662943 |    768.459736 | Sarah Werning                                                                                                                                                  |
+| 454 |    109.708055 |    125.923119 | Ignacio Contreras                                                                                                                                              |
+| 455 |    603.388251 |    579.755763 | Margot Michaud                                                                                                                                                 |
+| 456 |    646.934641 |    754.920715 | Andrés Sánchez                                                                                                                                                 |
+| 457 |    689.204749 |    671.675742 | Aline M. Ghilardi                                                                                                                                              |
+| 458 |     91.630780 |     14.017166 | Sarah Werning                                                                                                                                                  |
+| 459 |    973.821190 |     16.539358 | Gareth Monger                                                                                                                                                  |
+| 460 |    813.081137 |    765.084193 | Mario Quevedo                                                                                                                                                  |
+| 461 |     97.060586 |    465.996210 | Scott Hartman                                                                                                                                                  |
+| 462 |   1012.079760 |    280.676107 | Michelle Site                                                                                                                                                  |
+| 463 |    925.818283 |    683.078223 | Emily Jane McTavish                                                                                                                                            |
+| 464 |    162.828192 |    198.035598 | Margot Michaud                                                                                                                                                 |
+| 465 |    810.811117 |    429.780242 | Nobu Tamura (vectorized by A. Verrière)                                                                                                                        |
+| 466 |    624.720744 |     14.443451 | Margot Michaud                                                                                                                                                 |
+| 467 |    940.822328 |    455.404288 | Abraão Leite                                                                                                                                                   |
+| 468 |    656.518532 |    479.290051 | Jagged Fang Designs                                                                                                                                            |
+| 469 |    396.995301 |    795.581689 | Jagged Fang Designs                                                                                                                                            |
+| 470 |    872.277414 |    195.072369 | Yan Wong                                                                                                                                                       |
+| 471 |    586.157181 |    196.997536 | NA                                                                                                                                                             |
+| 472 |    146.254175 |    504.646716 | Michael Scroggie, from original photograph by Gary M. Stolz, USFWS (original photograph in public domain).                                                     |
+| 473 |   1006.701190 |    503.201222 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+| 474 |    515.351241 |    702.485945 | Joanna Wolfe                                                                                                                                                   |
+| 475 |    492.285450 |    339.958488 | Julia B McHugh                                                                                                                                                 |
+| 476 |    472.112099 |    179.684251 | Andrew A. Farke                                                                                                                                                |
+| 477 |    664.331472 |    290.512541 | Xavier A. Jenkins, Gabriel Ugueto                                                                                                                              |
+| 478 |    847.219237 |    665.564309 | T. Michael Keesey                                                                                                                                              |
+| 479 |    385.228161 |    117.502330 | Andrew A. Farke                                                                                                                                                |
+| 480 |    891.272448 |    474.333498 | Kelly                                                                                                                                                          |
+| 481 |    796.408531 |    247.431974 | Jaime Headden                                                                                                                                                  |
+| 482 |    736.457465 |    527.132170 | Scott Hartman                                                                                                                                                  |
+| 483 |    509.443439 |    494.240833 | FunkMonk                                                                                                                                                       |
+| 484 |    953.706759 |    765.177819 | Carlos Cano-Barbacil                                                                                                                                           |
+| 485 |    467.449429 |      4.920303 | Young and Zhao (1972:figure 4), modified by Michael P. Taylor                                                                                                  |
+| 486 |    975.921703 |     94.173672 | Markus A. Grohme                                                                                                                                               |
+| 487 |    659.804065 |     35.641019 | M Hutchinson                                                                                                                                                   |
+| 488 |    642.700682 |    410.805638 | Emily Willoughby                                                                                                                                               |
+| 489 |    237.801913 |     41.401438 | Jagged Fang Designs                                                                                                                                            |
+| 490 |    380.516845 |     74.991169 | Caleb M. Brown                                                                                                                                                 |
+| 491 |    699.443072 |     78.337528 | Trond R. Oskars                                                                                                                                                |
+| 492 |    725.422694 |    774.217300 | Zimices                                                                                                                                                        |
+| 493 |    352.977611 |    550.294992 | T. Michael Keesey (after A. Y. Ivantsov)                                                                                                                       |
+| 494 |     15.403022 |     53.888634 | Markus A. Grohme                                                                                                                                               |
+| 495 |    798.208388 |    157.083161 | Iain Reid                                                                                                                                                      |
+| 496 |     16.415460 |    791.342011 | Markus A. Grohme                                                                                                                                               |
+| 497 |    111.022946 |    540.245848 | DW Bapst (Modified from Bulman, 1964)                                                                                                                          |
+| 498 |    109.002597 |    659.441352 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+| 499 |     69.162003 |    194.388774 | Emily Jane McTavish                                                                                                                                            |
+| 500 |    325.398320 |    109.300365 | Margot Michaud                                                                                                                                                 |
+| 501 |   1015.141000 |    616.385654 | Gopal Murali                                                                                                                                                   |
+| 502 |    583.478702 |    334.833970 | Gabriela Palomo-Munoz                                                                                                                                          |
+| 503 |    404.600669 |    182.409954 | Nobu Tamura (vectorized by T. Michael Keesey)                                                                                                                  |
+| 504 |    717.569524 |    420.415276 | Jagged Fang Designs                                                                                                                                            |
+| 505 |    576.729009 |    223.196793 | Mark Hofstetter (vectorized by T. Michael Keesey)                                                                                                              |
+| 506 |    897.520093 |    751.544367 | Michael “FunkMonk” B. H. (vectorized by T. Michael Keesey)                                                                                                     |
+| 507 |    812.956003 |     45.874218 | Вальдимар (vectorized by T. Michael Keesey)                                                                                                                    |
+| 508 |     15.071115 |    125.283543 | Margot Michaud                                                                                                                                                 |
+| 509 |   1003.277374 |     67.016197 | Alex Slavenko                                                                                                                                                  |
+| 510 |    288.627160 |    709.837324 | Caleb M. Brown                                                                                                                                                 |
+| 511 |    536.556713 |    533.682632 | Matt Crook                                                                                                                                                     |
+| 512 |    257.371114 |    420.782898 | Renata F. Martins                                                                                                                                              |
+| 513 |    685.778836 |    268.178874 | Iain Reid                                                                                                                                                      |
+| 514 |    898.604712 |    328.409226 | Matt Crook                                                                                                                                                     |
+| 515 |     53.791263 |    678.432718 | Zachary Quigley                                                                                                                                                |
+| 516 |    382.762517 |    154.009948 | Iain Reid                                                                                                                                                      |
+| 517 |    682.630164 |    488.951356 | Steven Traver                                                                                                                                                  |
+| 518 |    265.302942 |    495.884683 | Matt Crook                                                                                                                                                     |
+| 519 |    836.889107 |    402.575664 | Mathew Wedel                                                                                                                                                   |
+| 520 |    119.468432 |    398.616270 | Julia B McHugh                                                                                                                                                 |
+| 521 |    483.602726 |    757.827092 | Matthew Hooge (vectorized by T. Michael Keesey)                                                                                                                |
+| 522 |    931.541649 |    785.896828 | Ghedo and T. Michael Keesey                                                                                                                                    |
+| 523 |    920.726637 |    764.415455 | NA                                                                                                                                                             |
+| 524 |   1017.219991 |    740.879060 | Michele M Tobias                                                                                                                                               |
+| 525 |    878.545209 |    298.664410 | Christoph Schomburg                                                                                                                                            |
+| 526 |    847.230727 |     97.172091 | Jaime Headden, modified by T. Michael Keesey                                                                                                                   |
+| 527 |    340.559106 |    792.326670 | Jagged Fang Designs                                                                                                                                            |
+| 528 |    809.795746 |    626.875107 | Alex Slavenko                                                                                                                                                  |
+| 529 |    899.003944 |    728.046385 | Jon Hill                                                                                                                                                       |
+| 530 |    593.821137 |     11.269197 | Jagged Fang Designs                                                                                                                                            |
+| 531 |    465.826991 |    143.391656 | Nobu Tamura, vectorized by Zimices                                                                                                                             |
+| 532 |    361.518186 |    215.211108 | C. Camilo Julián-Caballero                                                                                                                                     |
+| 533 |    960.482456 |    450.118373 | Chris huh                                                                                                                                                      |
+| 534 |    292.740721 |    488.171081 | Jagged Fang Designs                                                                                                                                            |
+| 535 |    580.624991 |    700.638772 | Michael Scroggie                                                                                                                                               |
+| 536 |    434.967113 |     13.094113 | Beth Reinke                                                                                                                                                    |
+| 537 |    881.491867 |     84.385941 | Smokeybjb                                                                                                                                                      |
+| 538 |    745.902564 |    263.939268 | Gareth Monger                                                                                                                                                  |
+| 539 |    565.183785 |    403.548400 | T. Michael Keesey (vector) and Stuart Halliday (photograph)                                                                                                    |
+| 540 |    112.212357 |    552.663713 | Chris huh                                                                                                                                                      |
 
     #> Your tweet has been posted!
