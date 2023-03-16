@@ -152,7 +152,7 @@ Now we extract the artists who made the above images using the uid of image.
 
 ```{r get_artist}
 image_dat <- lapply(phylopics$meta$uuid, 
-                    function(x) {Sys.sleep(2); rphylopic::image_get(x, options = c("credit"))$credit})
+                    function(x) {Sys.sleep(2); rphylopic::get_attribution(x)$contributor})
 ```
 
 ```{r post_tweet, echo=FALSE, results='hide'}
