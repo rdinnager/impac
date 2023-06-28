@@ -31,8 +31,8 @@ jobs:
       - name: Setup Dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          cache-version: 2
-          extra-packages: ropensci/rtweet, local::.
+          cache-version: 3
+          extra-packages: palaeoverse-community/rphylopic, local::.
 
       - name: Render Rmarkdown files
         env:

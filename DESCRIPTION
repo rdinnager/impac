@@ -24,7 +24,8 @@ Suggests:
     rmarkdown,
     Rvcg,
     rgl,
-    rphylopic,
+    rphylopic (>= 1.0.0),
     testthat (>= 3.0.0),
     rtweet
 Config/testthat/edition: 3
+
